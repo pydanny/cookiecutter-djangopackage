@@ -73,5 +73,28 @@ It's time to write the code!!!
 Register on PyPI
 ~~~~~~~~~~~~~~~~~
 
-Once you've got at least a prototype working and tests running, it's time to push to PyPI.
+Once you've got at least a prototype working and tests running, it's time to register the app on PyPI::
+
+    python setup.py register
+
+
+Releasing on PyPI
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Time to release a new version? Easy! Just run::
+
+    $ python setup.py publish
+
+It will answer with something like::
+
+    You probably want to also tag the version now:
+          git tag -a 0.1.0 -m 'version 0.1.0'
+          git push --tags
+
+Go ahead and follow those instructions.
+
+Add to Django Packages
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Once you have a release, and assuming you have an account there, just go to https://www.djangopackages.com/packages/add/ and add it there. 
 
