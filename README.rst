@@ -2,9 +2,12 @@
 cookiecutter-dj-package
 ======================
 
-A cookiecutter_ template for creating reusable Django packages (installable apps) quickly:
+A cookiecutter_ template for creating reusable Django packages (installable apps) quickly. 
+
+**Why?** Creating reusable Django packages has always been annoying. There are no defined/maintained best practices (especially for ``setup.py``), so you end up cutting and pasting hacky, poorly understood code from one project to the other. This template, inspired by `cookiecutter-pypackage`_, is designed to allow Django developers the ability to break free from cargo-cult configuration and follow a common pattern dictated by the experts and maintained here. 
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter.
+.. _cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage.
 
 
 Usage
@@ -35,7 +38,7 @@ Now run it against this repo::
 
 **Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
 
-It prompts you for questions. Answer them:
+It prompts you for questions. Answer them::
 
     Cloning into 'cookiecutter-dj-package'...
     remote: Counting objects: 49, done.
@@ -53,11 +56,11 @@ It prompts you for questions. Answer them:
     year (default is "2013")? 2013
     version (default is "0.1.0")? 0.3.0
 
-Now rename the repo:
+Now rename the repo::
 
     $ mv cookiecutter-dj-package Blogging-for-Humans
 
-Create a GitHub repo and push it there:
+Create a GitHub repo and push it there::
 
     $ cd Blogging-for-Humans/
     $ git init
