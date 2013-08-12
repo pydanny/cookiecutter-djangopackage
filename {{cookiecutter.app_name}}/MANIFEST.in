@@ -3,3 +3,4 @@ include CONTRIBUTING.rst
 include HISTORY.rst
 include LICENSE
 include README.rst
+recursive-include {{cookiecutter.app_name}} *.html *.png *.gif *js *jpg *jpeg *svg
