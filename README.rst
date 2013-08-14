@@ -60,21 +60,17 @@ It prompts you for questions. Answer them::
     year (default is "2013")? 2013
     version (default is "0.1.0")? 0.3.0
 
-Now rename the repo::
+Enter the project and take a look around::
 
-    $ mv cookiecutter-dj-package Blogging-for-Humans
-    
-At this time, cookiecutter leaves a little cruft behind, so it's good to cleanup the interior::
-
-    $ rm Blogging-for-Humans/{{cookiecutter.app_name}}
+    $ cd blogging-for-humans/
+    $ ls
 
 Create a GitHub repo and push it there::
 
-    $ cd Blogging-for-Humans/
     $ git init
     $ git add .
     $ git commit -m "first awesome commit!"
-    $ git remote add origin git@github.com:pydanny/Blogging-for-Humans.git
+    $ git remote add origin git@github.com:pydanny/blogging-for-humans.git
     $ git push -u origin master
 
 Now take a look at your repo. Awesome, right?
