@@ -25,20 +25,13 @@ Now run it against this repo::
 
     $ cookiecutter https://github.com/pydanny/cookiecutter-dj-package.git
 
-You'll be promoted for some questions, answer them, then it will create a cookiecutter-dj-package with your new package. Change the name of that directory to your own project's name, then send that to GitHub.
+You'll be prompted for some questions, answer them, then it will create a cookiecutter-dj-package with
+your new package.
 
-Example
--------
-
-You want to create a reusable Django app called "Blogging-for-Humans", with an app that can be placed in INSTALLED_APPS as "blogging_humans". Rather than have to copy/paste from other people's projects and then fight enthusiasm destroying app layout issues like `setup.py` configuration and creating test harnesses, you get cookiecutter_ to do all the work.
-
-First, get cookiecutter. I'm telling you, it's awesome::
-
-    $ pip install cookiecutter
-
-Now run it against this repo::
-
-    $ cookiecutter https://github.com/pydanny/cookiecutter-dj-package.git
+Let's pretend you want to create a reusable Django app called "Blogging-for-Humans", with an app that can be placed
+in INSTALLED_APPS as "blogging_humans". Rather than have to copy/paste from other people's projects and
+then fight enthusiasm destroying app layout issues like `setup.py` configuration and creating test
+harnesses, you get cookiecutter_ to do all the work.
 
 **Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
 
