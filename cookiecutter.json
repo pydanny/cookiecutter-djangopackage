@@ -1,12 +1,12 @@
 {
-	"full_name": "Your full name here",
-	"email": "you@example.com",
-	"github_username": "yourname",
-	"project_name": "dj-package",
-	"repo_name": "dj-package",
-    "app_name": "djpackage",
-	"project_short_description": "Your project description goes here",
-	"release_date": "2013-08-15",
-	"year": "2013",
-	"version": "0.1.0"
+  "full_name": "Your full name here",
+  "email": "you@example.com",
+  "github_username": "yourname",
+  "project_name": "dj-package",
+  "repo_name": "dj-package",
+  "app_name": "djpackage",
+  "project_short_description": "Your project description goes here",
+  "release_date": "2013-08-15",
+  "year": "2013",
+  "version": "0.1.0"
 }
