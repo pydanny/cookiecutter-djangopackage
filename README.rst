@@ -59,6 +59,10 @@ It prompts you for questions. Answer them::
 Now rename the repo::
 
     $ mv cookiecutter-dj-package Blogging-for-Humans
+    
+At this time, cookiecutter leaves a little cruft behind, so it's good to cleanup the interior::
+
+    $ rm Blogging-for-Humans/{{cookiecutter.app_name}}
 
 Create a GitHub repo and push it there::
 
