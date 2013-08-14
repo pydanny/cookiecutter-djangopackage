@@ -50,11 +50,11 @@ It prompts you for questions. Answer them::
     remote: Total 49 (delta 6), reused 48 (delta 5)
     Unpacking objects: 100% (49/49), done.
     full_name (default is "Your full name here")? Daniel Greenfeld
-    email (default is "Your email address here")? pydanny@gmail.com
-    github_username (default is "Your GitHub name here")? pydanny
-    project_name (default is "The human friendly project name goes here.")? Blogging-for-Humans
-    repo_name (default is "The GitHub repo name goes here")? blogging-for-humans
-    app_name (default is "The name that is added to INSTALLED_APPS goes here.")? blogging_humans        
+    email (default is "you@example.com")? pydanny@gmail.com
+    github_username (default is "yourname")? pydanny
+    project_name (default is "dj-package")? Blogging-for-Humans
+    repo_name (default is "dj-package")? blogging-for-humans
+    app_name (default is "djpackage")? blogging_humans        
     project_short_description (default is "Your project description goes here")? A blog that's easy for humans to use!
     release_date (default is "2013-08-15")? 2013-08-15
     year (default is "2013")? 2013
