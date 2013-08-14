@@ -4,7 +4,11 @@ cookiecutter-dj-package
 
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly. 
 
-**Why?** Creating reusable Django packages has always been annoying. There are no defined/maintained best practices (especially for ``setup.py``), so you end up cutting and pasting hacky, poorly understood code from one project to the other. This template, inspired by `cookiecutter-pypackage`_, is designed to allow Django developers the ability to break free from cargo-cult configuration and follow a common pattern dictated by the experts and maintained here. 
+**Why?** Creating reusable Django packages has always been annoying. There are no defined/maintained
+best practices (especially for ``setup.py``), so you end up cutting and pasting hacky, poorly understood, 
+often legacy code from one project to the other. This template, inspired by `cookiecutter-pypackage`_,
+is designed to allow Django developers the ability to break free from cargo-cult configuration and follow
+a common pattern dictated by the experts and maintained here. 
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter.
 .. _cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage.
