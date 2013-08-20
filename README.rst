@@ -1,6 +1,6 @@
-======================
-cookiecutter-dj-package
-======================
+==========================
+cookiecutter-djangopackage
+==========================
 
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly. 
 
