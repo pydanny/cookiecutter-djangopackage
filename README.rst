@@ -13,6 +13,15 @@ a common pattern dictated by the experts and maintained here.
 .. _cookiecutter: https://github.com/audreyr/cookiecutter.
 .. _cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage.
 
+Features
+--------
+
+* Travis-CI configuration
+* Tox configuration
+* Sphinx Documentation
+* Sane setup.py for easy PyPI registration/distribution
+* BSD licensed by default
+
 
 Usage
 ------
