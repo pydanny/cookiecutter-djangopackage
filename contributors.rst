@@ -6,3 +6,4 @@ Contributors
 * Raphi / raphigaziano
 * Aaron Bassett / aaronbassett
 * Marco Fucci / marcofucci
+* Diego Navarro / dnmellen
