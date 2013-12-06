@@ -70,6 +70,7 @@ setup(
         'pytest-django',
     ],
     install_requires=[
+        'Django>=1.2',
     ],
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
