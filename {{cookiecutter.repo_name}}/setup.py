@@ -2,16 +2,11 @@
 #!/usr/bin/env python
 
 import os
-import sys
+from setuptools import setup, find_packages
 
 pkgmeta = {}
 execfile(os.path.join(os.path.dirname(__file__),
          '{{ cookiecutter.app_name }}', 'pkgmeta.py'), pkgmeta)
-
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
 
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
@@ -24,9 +19,7 @@ setup(
     author=pkgmeta['__author__'],
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-    packages=[
-        '{{ cookiecutter.repo_name }}',
-    ],
+    packages=find_packages(),
     include_package_data=True,
     install_requires=[
     ],
