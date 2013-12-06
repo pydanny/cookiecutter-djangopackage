@@ -3,10 +3,28 @@
 
 import os
 from setuptools import setup, find_packages, Command
+from setuptools.command.test import test as TestCommand
+import sys
+
 
 pkgmeta = {}
 execfile(os.path.join(os.path.dirname(__file__),
          '{{ cookiecutter.app_name }}', 'pkgmeta.py'), pkgmeta)
+
+
+class PyTest(TestCommand):
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = ['tests', '-s']
+        self.test_suite = True
+
+    def run_tests(self):
+        import pytest
+        # Make sure this package's tests module gets priority.
+        sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+        os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.settings'
+        errno = pytest.main(self.test_args)
+        sys.exit(errno)
 
 
 class LintCommand(Command):
@@ -48,6 +66,9 @@ setup(
     setup_requires=[
         'flake8',
     ],
+    tests_require=[
+        'pytest-django',
+    ],
     install_requires=[
     ],
     zip_safe=False,
@@ -65,6 +86,7 @@ setup(
         'Programming Language :: Python :: 3.3',
     ],
     cmdclass={
+        'test': PyTest,
         'lint': LintCommand,
     },
 )
