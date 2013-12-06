@@ -30,7 +30,6 @@ setup(
     include_package_data=True,
     install_requires=[
     ],
-    license="BSD",
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
