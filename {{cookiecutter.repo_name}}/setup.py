@@ -2,11 +2,36 @@
 #!/usr/bin/env python
 
 import os
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Command
 
 pkgmeta = {}
 execfile(os.path.join(os.path.dirname(__file__),
          '{{ cookiecutter.app_name }}', 'pkgmeta.py'), pkgmeta)
+
+
+class LintCommand(Command):
+    """
+    A copy of flake8's Flake8Command
+
+    """
+    description = "Run flake8 on modules registered in setuptools"
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def distribution_files(self):
+        if self.distribution.packages:
+            for package in self.distribution.packages:
+                yield package.replace(".", os.path.sep)
+
+        if self.distribution.py_modules:
+            for filename in self.distribution.py_modules:
+                yield "%s.py" % filename
+
 
 readme = open('README.rst').read()
 
@@ -20,6 +45,9 @@ setup(
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
     packages=find_packages(),
     include_package_data=True,
+    setup_requires=[
+        'flake8',
+    ],
     install_requires=[
     ],
     zip_safe=False,
@@ -36,4 +64,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
     ],
+    cmdclass={
+        'lint': LintCommand,
+    },
 )
