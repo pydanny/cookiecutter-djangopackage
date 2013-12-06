@@ -9,13 +9,12 @@ execfile(os.path.join(os.path.dirname(__file__),
          '{{ cookiecutter.app_name }}', 'pkgmeta.py'), pkgmeta)
 
 readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name=pkgmeta['__title__'],
     version=pkgmeta['__version__'],
     description='{{ cookiecutter.project_short_description }}',
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author=pkgmeta['__author__'],
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
