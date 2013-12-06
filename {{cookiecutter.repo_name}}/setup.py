@@ -4,24 +4,24 @@
 import os
 import sys
 
-import {{ cookiecutter.repo_name }}
+pkgmeta = {}
+execfile(os.path.join(os.path.dirname(__file__),
+         '{{ cookiecutter.app_name }}', 'pkgmeta.py'), pkgmeta)
 
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-version = {{ cookiecutter.repo_name }}.__version__
-
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='{{ cookiecutter.project_name }}',
-    version=version,
+    name=pkgmeta['__title__'],
+    version=pkgmeta['__version__'],
     description='{{ cookiecutter.project_short_description }}',
     long_description=readme + '\n\n' + history,
-    author='{{ cookiecutter.full_name }}',
+    author=pkgmeta['__author__'],
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
     packages=[
