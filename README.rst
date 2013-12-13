@@ -2,25 +2,15 @@
 cookiecutter-djangopackage
 ==========================
 
-A cookiecutter_ template for creating reusable Django packages (installable apps) quickly. 
+This is HZ's fork of pydanny's cookiecutter-djangopackage cookiecutter_
+template. It has a few key differences from the original, including:
 
-**Why?** Creating reusable Django packages has always been annoying. There are no defined/maintained
-best practices (especially for ``setup.py``), so you end up cutting and pasting hacky, poorly understood, 
-often legacy code from one project to the other. This template, inspired by `cookiecutter-pypackage`_,
-is designed to allow Django developers the ability to break free from cargo-cult configuration and follow
-a common pattern dictated by the experts and maintained here. 
+* Centralize meta information in pkgmeta.py instead of importing the app prior to installation.
+* Use PyTest for testing.
+* Pretty doc theme.
+* Stuff we don't use is removed.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
-.. _cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
-
-Features
---------
-
-* Travis-CI configuration
-* Tox configuration
-* Sphinx Documentation
-* Sane setup.py for easy PyPI registration/distribution
-* BSD licensed by default
 
 
 Usage
@@ -32,7 +22,7 @@ First, get cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/pydanny/cookiecutter-dj-package.git
+    $ cookiecutter https://github.com/hzdg/cookiecutter-djangopackage.git
 
 You'll be prompted for some questions, answer them, then it will create a cookiecutter-dj-package with
 your new package.
@@ -78,32 +68,3 @@ Create a GitHub repo and push it there::
 Now take a look at your repo. Awesome, right?
 
 It's time to write the code!!!
-
-Register on PyPI
-~~~~~~~~~~~~~~~~~
-
-Once you've got at least a prototype working and tests running, it's time to register the app on PyPI::
-
-    python setup.py register
-
-
-Releasing on PyPI
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Time to release a new version? Easy! Just run::
-
-    $ python setup.py publish
-
-It will answer with something like::
-
-    You probably want to also tag the version now:
-          git tag -a 0.1.0 -m 'version 0.1.0'
-          git push --tags
-
-Go ahead and follow those instructions.
-
-Add to Django Packages
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Once you have a release, and assuming you have an account there, just go to https://www.djangopackages.com/packages/add/ and add it there. 
-
