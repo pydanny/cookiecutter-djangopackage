@@ -1,5 +1,4 @@
 import sys
-from optparse import OptionParser
 
 try:
     from django.conf import settings
@@ -42,6 +41,4 @@ def run_tests(*test_args):
 
 
 if __name__ == '__main__':
-    parser = OptionParser()
-    (options, args) = parser.parse_args()
-    run_tests(*args)
+    run_tests(*sys.argv[1:])
