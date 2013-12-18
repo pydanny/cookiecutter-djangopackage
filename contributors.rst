@@ -7,3 +7,4 @@ Contributors
 * Aaron Bassett / aaronbassett
 * Marco Fucci / marcofucci
 * Diego Navarro / dnmellen
+* Bartek Ciszkowski / bartek
