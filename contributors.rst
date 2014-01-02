@@ -9,3 +9,4 @@ Contributors
 * Diego Navarro / dnmellen
 * Bartek Ciszkowski / bartek
 * Steve Schwarz / saschwarz
+* Bernd Grobauer / bgro
