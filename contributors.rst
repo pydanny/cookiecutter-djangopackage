@@ -8,3 +8,4 @@ Contributors
 * Marco Fucci / marcofucci
 * Diego Navarro / dnmellen
 * Bartek Ciszkowski / bartek
+* Steve Schwarz / saschwarz
