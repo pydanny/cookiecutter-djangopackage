@@ -17,6 +17,7 @@ Features
 --------
 
 * Travis-CI configuration
+* Coveralls configuration
 * Tox configuration
 * Sphinx Documentation
 * Sane setup.py for easy PyPI registration/distribution
