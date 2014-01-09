@@ -11,3 +11,4 @@ Contributors
 * Steve Schwarz / saschwarz
 * Bernd Grobauer / bgro
 * Fábio C. Barrionuevo da Luz / luzfcb
+* jcugat
