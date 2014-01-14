@@ -12,3 +12,4 @@ Contributors
 * Bernd Grobauer / bgro
 * Fábio C. Barrionuevo da Luz / luzfcb
 * jcugat
+* Filip Wasilewski / nigma
