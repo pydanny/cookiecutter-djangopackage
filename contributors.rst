@@ -13,3 +13,4 @@ Contributors
 * Fábio C. Barrionuevo da Luz / luzfcb
 * jcugat
 * Filip Wasilewski / nigma
+* Ben Lopatin / bennylope
