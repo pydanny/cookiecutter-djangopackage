@@ -5,7 +5,7 @@
 test_{{ cookiecutter.repo_name }}
 ------------
 
-Tests for `{{ cookiecutter.repo_name }}` modules module.
+Tests for `{{ cookiecutter.repo_name }}` models module.
 """
 
 import os
