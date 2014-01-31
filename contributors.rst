@@ -16,3 +16,4 @@ Contributors
 * Ben Lopatin / bennylope
 * Federico Frenguelli / synasius
 * German Larrain / glarrain
+* Paul Hallett / phalt
