@@ -14,3 +14,4 @@ Contributors
 * jcugat
 * Filip Wasilewski / nigma
 * Ben Lopatin / bennylope
+* Paul Hallett / phalt
