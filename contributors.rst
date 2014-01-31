@@ -15,3 +15,4 @@ Contributors
 * Filip Wasilewski / nigma
 * Ben Lopatin / bennylope
 * Federico Frenguelli / synasius
+* German Larrain / glarrain
