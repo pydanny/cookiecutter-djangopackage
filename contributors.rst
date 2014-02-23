@@ -17,3 +17,4 @@ Contributors
 * Federico Frenguelli / synasius
 * German Larrain / glarrain
 * Paul Hallett / phalt
+* Erik Romijn / erikr
