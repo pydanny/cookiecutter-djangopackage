@@ -18,3 +18,4 @@ Contributors
 * German Larrain / glarrain
 * Paul Hallett / phalt
 * Erik Romijn / erikr
+* Eyad Toma / dadoeyad
