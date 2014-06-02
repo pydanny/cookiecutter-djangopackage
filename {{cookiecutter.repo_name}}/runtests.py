@@ -24,9 +24,11 @@ try:
 
     try:
         import django
-        django.setup()
+        setup = django.setup
     except AttributeError:
         pass
+    else:
+        setup()
 
     from django_nose import NoseTestSuiteRunner
 except ImportError:
