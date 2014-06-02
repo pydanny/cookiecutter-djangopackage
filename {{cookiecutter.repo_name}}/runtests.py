@@ -22,6 +22,12 @@ try:
         NOSE_ARGS=['-s'],
     )
 
+    try:
+        import django
+        django.setup()
+    except AttributeError:
+        pass
+
     from django_nose import NoseTestSuiteRunner
 except ImportError:
     raise ImportError("To fix this error, run: pip install -r requirements-test.txt")
