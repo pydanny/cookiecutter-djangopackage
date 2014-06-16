@@ -10,12 +10,12 @@ Tests for `{{ cookiecutter.repo_name }}` models module.
 
 import os
 import shutil
-import unittest
+from django.test import TestCase
 
 from {{ cookiecutter.app_name }} import models
 
 
-class Test{{ cookiecutter.app_name|capitalize }}(unittest.TestCase):
+class Test{{ cookiecutter.app_name|capitalize }}(TestCase):
 
     def setUp(self):
         pass
