@@ -17,3 +17,4 @@ Contents:
    contributing
    authors
    history
+   license
