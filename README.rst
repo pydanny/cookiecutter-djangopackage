@@ -4,6 +4,8 @@ cookiecutter-djangopackage
 
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
 
+.. _cookiecutter: https://github.com/audreyr/cookiecutter
+
 Usage
 ------
 
