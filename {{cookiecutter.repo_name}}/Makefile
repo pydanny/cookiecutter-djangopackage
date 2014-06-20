@@ -27,7 +27,7 @@ lint:
 	flake8 {{ cookiecutter.repo_name }} tests
 
 test:
-	python runtests.py test
+	python runtests.py tests
 
 test-all:
 	tox
@@ -39,9 +39,9 @@ coverage:
 	open htmlcov/index.html
 
 docs:
-	rm -f docs/{{ cookiecutter.repo_name }}.rst
+	rm -f docs/{{ cookiecutter.app_name }}.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ {{ cookiecutter.repo_name }}
+	sphinx-apidoc -o docs/ {{ cookiecutter.app_name }}
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	open docs/_build/html/index.html
