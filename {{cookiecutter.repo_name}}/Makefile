@@ -24,16 +24,16 @@ clean-pyc:
 	find . -name '*~' -exec rm -f {} +
 
 lint:
-	flake8 {{ cookiecutter.repo_name }} tests
+	flake8 {{ cookiecutter.app_name }} tests
 
 test:
-	python runtests.py test
+	python runtests.py tests
 
 test-all:
 	tox
 
 coverage:
-	coverage run --source {{ cookiecutter.repo_name }} setup.py test
+	coverage run --source {{ cookiecutter.app_name }} runtests.py tests
 	coverage report -m
 	coverage html
 	open htmlcov/index.html
