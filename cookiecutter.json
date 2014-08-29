@@ -2,6 +2,7 @@
   "full_name": "Your full name here",
   "email": "you@example.com",
   "github_username": "yourname",
+  "company_name": "Hogarth Worldwide",
   "project_name": "djangopackage",
   "repo_name": "hogarthww_djangopackage",
   "app_name": "djangopackage",

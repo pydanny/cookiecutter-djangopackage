@@ -6,6 +6,8 @@ import sys
 
 import {{ cookiecutter.app_name }}
 
+import commands
+
 try:
     from setuptools import setup
 except ImportError:
@@ -23,6 +25,7 @@ if sys.argv[-1] == 'publish':
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
+
 setup(
     name='{{ cookiecutter.project_name }}',
     version=version,
@@ -37,10 +40,17 @@ setup(
     include_package_data=True,
     install_requires=[
     ],
-    license="BSD",
+    test_requires=[
+        'pytest'
+    ],
+    cmd_class={
+        'test': commands.UnitTest
+    },
+    license="PROPRIETARY",
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
+        'Private :: Do Not Upload',
         'Development Status :: 2 - Pre-Alpha',
         'Framework :: Django',
         'Intended Audience :: Developers',

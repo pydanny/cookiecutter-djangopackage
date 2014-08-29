@@ -6,8 +6,9 @@ Bugs
 ~~~~
 
 Please report bugs on our bug tracker: https://hogarthww.atlassian.net/
+And use the bug report template located here: https://github.hogarthww.prv/chrisdcunha/bug-report-template
 
-If you are reporting a bug, please include:
+The template includes:
 
 * OS name and version.
 * Details about your test setup/settings.
@@ -25,12 +26,12 @@ Get Started!
 1. Clone the repo locally::
 
     $ git clone git@github.hogarth.prv:hogarthww/{{ cookiecutter.repo_name }}.git
+    $ cd {{ cookiecutter.repo_name }}/
 
 2. Create a virtualenv and install dev dependencies::
 
     $ mkvirtualenv {{ cookiecutter.repo_name }}
-    $ cd {{ cookiecutter.repo_name }}/
-    $ python setup.py develop
+    $ pip install -r requirements-test.txt
 
 4. Create a branch for your new feature::
 
@@ -40,8 +41,8 @@ Now you can make your changes locally.
 
 5. Run tests and linting to make sure they pass::
 
-    $ flake8 {{ cookiecutter.app_name }} tests
-    $ python setup.py test
+    $ make lint
+    $ make test
     $ tox
 
 6. Commit your changes and push your branch to GitHub::
@@ -64,4 +65,4 @@ Tips
 
 To run a subset of tests::
 
-    $ python -m unittest tests.test_{{ cookiecutter.app_name }}
+    $ make test tests/test_models.py

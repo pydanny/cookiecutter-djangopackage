@@ -38,5 +38,12 @@ nosetests.xml
 output/*.html
 output/*/index.html
 
-# Sphinx
+# Sphinx and Coverage
 docs/_build
+htmlcov/
+
+# Rope
+.ropeproject
+
+# OS X
+.DS_Store

@@ -27,7 +27,7 @@ lint:
 	flake8 {{ cookiecutter.repo_name }} tests
 
 test:
-	python runtests.py tests
+	python runtests.py
 
 test-all:
 	tox

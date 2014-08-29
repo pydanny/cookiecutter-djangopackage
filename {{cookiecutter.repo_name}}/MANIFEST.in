@@ -3,4 +3,10 @@ include CONTRIBUTING.rst
 include HISTORY.rst
 include LICENSE
 include README.rst
-recursive-include {{cookiecutter.app_name}} *.html *.png *.gif *js *.css *jpg *jpeg *svg *py
+include tox.ini
+include requirements.txt
+include requirements-test.txt
+include commands.py
+include runtests.py
+recursive-include {{cookiecutter.app_name}} *.html *.png *.gif *js *.css *jpg *jpeg *svg *py *ini
+recursive-include tests *.html *.png *.gif *js *.css *jpg *jpeg *svg *py *ini
