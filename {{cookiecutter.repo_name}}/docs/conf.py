@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -22,6 +23,7 @@ cwd = os.getcwd()
 parent = os.path.dirname(cwd)
 sys.path.append(parent)
 
+from tests import conftest
 import {{ cookiecutter.app_name }}
 
 # -- General configuration -----------------------------------------------------
@@ -47,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'{{ cookiecutter.project_name }}'
-copyright = u'{{ cookiecutter.year }}, {{ cookiecutter.full_name }}'
+copyright = u'{{ cookiecutter.year }}, {{ cookiecutter.company_name }}'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -100,7 +102,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -108,7 +110,7 @@ html_theme = 'default'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -193,7 +195,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', '{{ cookiecutter.repo_name }}.tex', u'{{ cookiecutter.project_name }} Documentation',
-   u'{{ cookiecutter.full_name }}', 'manual'),
+   u'{{ cookiecutter.company_name }}', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -223,7 +225,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', '{{ cookiecutter.repo_name }}', u'{{ cookiecutter.project_name }} Documentation',
-     [u'{{ cookiecutter.full_name }}'], 1)
+     [u'{{ cookiecutter.company_name }}'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -237,7 +239,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', '{{ cookiecutter.repo_name }}', u'{{ cookiecutter.project_name }} Documentation',
-   u'{{ cookiecutter.full_name }}', '{{ cookiecutter.repo_name }}', 'One line description of project.',
+   u'{{ cookiecutter.company_name }}', '{{ cookiecutter.repo_name }}', 'One line description of project.',
    'Miscellaneous'),
 ]
 

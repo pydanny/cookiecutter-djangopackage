@@ -1,46 +1,41 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
-import sys
+from setuptools import setup, find_packages
 
 import {{ cookiecutter.app_name }}
-
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+import commands
 
 version = {{ cookiecutter.app_name }}.__version__
 
-if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
-    print("You probably want to also tag the version now:")
-    print("  git tag -a %s -m 'version %s'" % (version, version))
-    print("  git push --tags")
-    sys.exit()
-
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+contributing = open('CONTRIBUTING.rst').read()
 
 setup(
     name='{{ cookiecutter.project_name }}',
     version=version,
     description="""{{ cookiecutter.project_short_description }}""",
-    long_description=readme + '\n\n' + history,
-    author='{{ cookiecutter.full_name }}',
-    author_email='{{ cookiecutter.email }}',
-    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-    packages=[
-        '{{ cookiecutter.app_name }}',
-    ],
+    long_description=readme + '\n\n' + history + '\n\n' + contributing,
+    author='{{ cookiecutter.company_name }}',
+    author_email='{{ cookiecutter.company_email }}',
+    url='https://github.hogarthww.prv/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
+    packages=find_packages('{{ cookiecutter.app_name }}', exclude=('tests',)),
+    package_dir={'': '{{ cookiecutter.app_name }}'},
     include_package_data=True,
     install_requires=[
     ],
-    license="BSD",
+    test_requires=[
+        'pytest'
+    ],
+    cmd_class={
+        'test': commands.UnitTest
+    },
+    license="PROPRIETARY",
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
+        'Private :: Do Not Upload',
         'Development Status :: 2 - Pre-Alpha',
         'Framework :: Django',
         'Intended Audience :: Developers',
