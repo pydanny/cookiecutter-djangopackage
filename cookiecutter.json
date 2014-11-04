@@ -3,6 +3,7 @@
   "email": "you@example.com",
   "github_username": "yourname",
   "company_name": "Hogarth Worldwide",
+  "company_email": "umbrella@hogarthww.com",
   "project_name": "djangopackage",
   "repo_name": "hogarthww_djangopackage",
   "app_name": "djangopackage",
