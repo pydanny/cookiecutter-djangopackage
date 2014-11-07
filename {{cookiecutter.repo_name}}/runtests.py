@@ -32,6 +32,8 @@ try:
 
     from django_nose import NoseTestSuiteRunner
 except ImportError:
+    import traceback
+    traceback.print_exc()
     raise ImportError("To fix this error, run: pip install -r requirements-test.txt")
 
 
