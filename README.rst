@@ -33,7 +33,7 @@ First, get cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/pydanny/cookiecutter-dj-package.git
+    $ cookiecutter https://github.com/pydanny/cookiecutter-djangopackage.git
 
 You'll be prompted for some questions, answer them, then it will create a cookiecutter-dj-package with
 your new package.
