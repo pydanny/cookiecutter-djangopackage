@@ -2,6 +2,7 @@ import sys
 
 try:
     from django.conf import settings
+    from django.test.utils import get_runner
 
     settings.configure(
         DEBUG=True,
@@ -19,7 +20,6 @@ try:
             "{{ cookiecutter.app_name }}",
         ],
         SITE_ID=1,
-        NOSE_ARGS=['-s'],
         MIDDLEWARE_CLASSES=(),
     )
 
@@ -31,7 +31,6 @@ try:
     else:
         setup()
 
-    from django_nose import NoseTestSuiteRunner
 except ImportError:
     import traceback
     traceback.print_exc()
@@ -43,12 +42,13 @@ def run_tests(*test_args):
         test_args = ['tests']
 
     # Run tests
-    test_runner = NoseTestSuiteRunner(verbosity=1)
+    TestRunner = get_runner(settings)
+    test_runner = TestRunner()
 
     failures = test_runner.run_tests(test_args)
 
     if failures:
-        sys.exit(failures)
+        sys.exit(bool(failures))
 
 
 if __name__ == '__main__':
