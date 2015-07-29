@@ -34,8 +34,8 @@ Features
 Cookiecutter Tools Used in Making This Package
 ----------------------------------------------
 
-* cookiecutter_
-* `cookiecutter-djangopackage`_
+*  cookiecutter_
+*  `cookiecutter-djangopackage`_
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`cookiecutter-django`: https://github.com/pydanny/cookiecutter-djangopackage
