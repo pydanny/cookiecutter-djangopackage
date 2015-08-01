@@ -16,11 +16,11 @@ a common pattern dictated by the experts and maintained here.
 Features
 --------
 
+* Sane setup.py for easy PyPI registration/distribution
 * Travis-CI configuration
 * Coveralls configuration
 * Tox configuration
 * Sphinx Documentation
-* Sane setup.py for easy PyPI registration/distribution
 * BSD licensed by default
 
 
