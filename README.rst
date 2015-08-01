@@ -108,3 +108,16 @@ Add to Django Packages
 
 Once you have a release, and assuming you have an account there, just go to https://www.djangopackages.com/packages/add/ and add it there. 
 
+
+Follows Best Practices
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: http://twoscoops.smugmug.com/Two-Scoops-Press-Media-Kit/i-C8s5jkn/0/O/favicon-152.png
+   :name: Two Scoops Logo
+   :align: center
+   :alt: Two Scoops of Django
+   :target: http://twoscoopspress.org/products/two-scoops-of-django-1-8
+
+This project follows best practices as espoused in `Two Scoops of Django: Best Practices for Django 1.8`_.
+
+.. _`Two Scoops of Django: Best Practices for Django 1.8`: http://twoscoopspress.org/products/two-scoops-of-django-1-8
