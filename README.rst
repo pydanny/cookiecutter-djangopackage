@@ -2,13 +2,13 @@
 cookiecutter-djangopackage
 ==========================
 
-A cookiecutter_ template for creating reusable Django packages (installable apps) quickly. 
+A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
 
 **Why?** Creating reusable Django packages has always been annoying. There are no defined/maintained
-best practices (especially for ``setup.py``), so you end up cutting and pasting hacky, poorly understood, 
+best practices (especially for ``setup.py``), so you end up cutting and pasting hacky, poorly understood,
 often legacy code from one project to the other. This template, inspired by `cookiecutter-pypackage`_,
 is designed to allow Django developers the ability to break free from cargo-cult configuration and follow
-a common pattern dictated by the experts and maintained here. 
+a common pattern dictated by the experts and maintained here.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 .. _cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
@@ -18,7 +18,7 @@ Features
 
 * Sane setup.py for easy PyPI registration/distribution
 * Travis-CI configuration
-* Coveralls configuration
+* Codecov configuration
 * Tox configuration
 * Sphinx Documentation
 * BSD licensed by default
@@ -57,7 +57,7 @@ It prompts you for questions. Answer them::
     github_username (default is "yourname")? pydanny
     project_name (default is "dj-package")? Blogging-for-Humans
     repo_name (default is "dj-package")? blogging-for-humans
-    app_name (default is "djpackage")? blogging_humans        
+    app_name (default is "djpackage")? blogging_humans
     project_short_description (default is "Your project description goes here")? A blog that's easy for humans to use!
     release_date (default is "2013-08-15")? 2013-08-15
     year (default is "2013")? 2013
@@ -106,7 +106,7 @@ Go ahead and follow those instructions.
 Add to Django Packages
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have a release, and assuming you have an account there, just go to https://www.djangopackages.com/packages/add/ and add it there. 
+Once you have a release, and assuming you have an account there, just go to https://www.djangopackages.com/packages/add/ and add it there.
 
 
 Follows Best Practices
