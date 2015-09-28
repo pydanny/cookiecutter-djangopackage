@@ -24,3 +24,4 @@ Contributors
 * Angel Velasquez / @angvp
 * Mathias / @Math-ias
 * Jef Geskens / @jgeskens
+* Grant Mcconnaughey / @grantmcconnaughey
