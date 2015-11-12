@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Bumpversion in project and requirements_dev.txt (@guilhermemaba)
 - Travis for light testing (@pydanny)
 - Two Scoops Academy sponsor mention (@pydanny)
+- Testing instructions (@pydanny)
 
 ## 2015/09/28
 ### Changed

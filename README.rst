@@ -83,6 +83,17 @@ Now take a look at your repo. Awesome, right?
 
 It's time to write the code!!!
 
+Running Tests
+~~~~~~~~~~~~~~~~~
+
+Code has been written, but does it actually work? Let's find out!
+
+::
+
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install requirements-text.py
+    (myenv) $ python runtests.py
+
 Register on PyPI
 ~~~~~~~~~~~~~~~~~
 
