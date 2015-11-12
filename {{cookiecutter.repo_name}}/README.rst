@@ -31,13 +31,10 @@ Features
 
 * TODO
 
-Run the Tests
+Running Tests
 --------------
 
-Running Tests
-~~~~~~~~~~~~~~~~~
-
-Code has been written, but does it actually work? Let's find out!
+Does the code actually work?
 
 ::
 
@@ -45,8 +42,13 @@ Code has been written, but does it actually work? Let's find out!
     (myenv) $ pip install requirements-text.py
     (myenv) $ python runtests.py
 
-Cookiecutter Tools Used in Making This Package
-----------------------------------------------
+Credits
+---------
 
-*  cookiecutter
-*  cookiecutter-djangopackage
+Tools used in rendering this package:
+
+*  Cookiecutter_
+*  `cookiecutter-pypackage`_
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`cookiecutter-pypackage`: https://github.com/pydanny/cookiecutter-djangopackage
