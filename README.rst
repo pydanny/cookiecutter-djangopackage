@@ -2,6 +2,9 @@
 cookiecutter-djangopackage
 ==========================
 
+.. image:: https://travis-ci.org/pydanny/cookiecutter-djangopackage.svg?branch=master
+    :target: https://travis-ci.org/pydanny/cookiecutter-djangopackage
+
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
 
 **Why?** Creating reusable Django packages has always been annoying. There are no defined/maintained
@@ -121,3 +124,14 @@ Follows Best Practices
 This project follows best practices as espoused in `Two Scoops of Django: Best Practices for Django 1.8`_.
 
 .. _`Two Scoops of Django: Best Practices for Django 1.8`: http://twoscoopspress.org/products/two-scoops-of-django-1-8
+
+Support This Project
+--------------------
+
+This project is maintained by volunteers. Support their efforts by spreading the word about:
+
+.. image:: https://s3.amazonaws.com/tsacademy/images/tsa-logo-250x60-transparent-01.png
+   :name: Two Scoops Academy
+   :align: center
+   :alt: Two Scoops Academy
+   :target: http://www.twoscoops.academy/
