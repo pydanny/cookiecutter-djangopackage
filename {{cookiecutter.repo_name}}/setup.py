@@ -14,6 +14,11 @@ except ImportError:
 version = {{ cookiecutter.app_name }}.__version__
 
 if sys.argv[-1] == 'publish':
+    try:
+        import wheel
+    except ImportError:
+        print('Wheel library missing. Please run "pip install wheel"')
+        sys.exit()
     os.system('python setup.py sdist upload')
     os.system('python setup.py bdist_wheel upload')
     sys.exit()
