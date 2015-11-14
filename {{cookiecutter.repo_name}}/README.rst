@@ -39,7 +39,7 @@ Does the code actually work?
 ::
 
     source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install requirements-text.py
+    (myenv) $ pip install -r requirements-text.txt
     (myenv) $ python runtests.py
 
 Credits
