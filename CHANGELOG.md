@@ -2,6 +2,11 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2015-11-20]
+### Changed
+- Fixed typo in README (@grokcode)
+
+
 ## [2015-11-14]
 ### Changed
 - Fixed installation description (@jondelmil)
