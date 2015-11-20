@@ -1,7 +1,8 @@
 Contributors
 =============
 
-* Daniel Greenfeld / @pydanny
+* Daniel Roy Greenfeld / @pydanny
+* Audrey Roy Greenfeld / @audreyr
 * Jakh Daven / @tuxcanfly
 * Raphi / @raphigaziano
 * Aaron Bassett / @aaronbassett
