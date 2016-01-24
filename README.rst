@@ -91,7 +91,7 @@ Code has been written, but does it actually work? Let's find out!
 ::
 
     source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install requirements-test.txt
+    (myenv) $ pip install -r requirements-test.txt
     (myenv) $ python runtests.py
 
 Register on PyPI
