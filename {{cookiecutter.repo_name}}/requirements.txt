@@ -1,2 +1,2 @@
-django>=1.8.0
+django>=1.9.1
 # Additional requirements go here
