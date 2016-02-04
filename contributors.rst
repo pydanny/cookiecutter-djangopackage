@@ -30,3 +30,4 @@ Contributors
 * Jon Miller / @jondelmil
 * Jess Johnson / @grokcode
 * David Stephens / @davidastephens
+* @jangeador
