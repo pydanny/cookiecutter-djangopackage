@@ -2,6 +2,10 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2016-02-04]
+### Added
+- Corrected pip command (@davidastephens)
+- 
 ## [2015-11-23]
 ### Added
 - Validation of app_name (@hackebrot)
