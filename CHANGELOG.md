@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2016-02-04]
 ### Added
 - Corrected pip command (@davidastephens)
-- 
+- Fixed filepath argument in setup.py (@jangeador)
+
 ## [2015-11-23]
 ### Added
 - Validation of app_name (@hackebrot)
