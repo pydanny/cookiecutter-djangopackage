@@ -28,4 +28,5 @@ Contributors
 * Grant Mcconnaughey / @grantmcconnaughey
 * @guilhermemaba
 * Jon Miller / @jondelmil
-* Jess Johnson / grokcode
+* Jess Johnson / @grokcode
+* David Stephens / @davidastephens
