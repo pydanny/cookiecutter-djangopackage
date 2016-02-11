@@ -36,6 +36,9 @@ htmlcov
 .project
 .pydevproject
 
+# Pycharm/Intellij
+.idea
+
 # Complexity
 output/*.html
 output/*/index.html
