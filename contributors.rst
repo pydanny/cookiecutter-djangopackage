@@ -31,3 +31,4 @@ Contributors
 * Jess Johnson / @grokcode
 * David Stephens / @davidastephens
 * @jangeador
+* Chris Adams / @acdha
