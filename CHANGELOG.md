@@ -2,15 +2,17 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-<<<<<<< HEAD
+## [2016-05-06]
+### Changed
+- Fix Makefile to use Python to open the docs in the default webbrowser (@JoseTomasTocino)
+
 ## [2016-02-29]
 ### Changed
-- Ffix indents following code blocks (@acdha)
-=======
+- Fix indents following code blocks (@acdha)
+
 ## [2016-02-11]
 ### Added
 - Added Pycharm project configuration folder to .gitignore (@luzfcb)
->>>>>>> 6b1e0e88af71b7f73f362ff22b10ad1ab5a6f16f
 
 ## [2016-02-04]
 ### Added
