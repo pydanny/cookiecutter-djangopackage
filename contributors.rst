@@ -32,3 +32,4 @@ Contributors
 * David Stephens / @davidastephens
 * @jangeador
 * Chris Adams / @acdha
+* José Tomás Tocino / @JoseTomasTocino
