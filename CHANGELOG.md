@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2016-05-06]
 ### Changed
+- Made MakeFile self documenting (@aaronbassett)
+
+## [2016-05-06]
+### Changed
 - Fix Makefile to use Python to open the docs in the default webbrowser (@JoseTomasTocino)
 
 ## [2016-02-29]
