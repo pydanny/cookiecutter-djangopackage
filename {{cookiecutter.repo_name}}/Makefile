@@ -1,4 +1,5 @@
-.PHONY: clean-pyc clean-build docs
+.PHONY: clean-pyc clean-build docs help
+.DEFAULT_GOAL := help
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
 try:
@@ -12,44 +13,36 @@ export BROWSER_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
 help:
-	@echo "clean-build - remove build artifacts"
-	@echo "clean-pyc - remove Python file artifacts"
-	@echo "lint - check style with flake8"
-	@echo "test - run tests quickly with the default Python"
-	@echo "test-all - run tests on every Python version with tox"
-	@echo "coverage - check code coverage quickly with the default Python"
-	@echo "docs - generate Sphinx HTML documentation, including API docs"
-	@echo "release - package and upload a release"
-	@echo "sdist - package"
+	@perl -nle'print $& if m{^[a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-25s\033[0m %s\n", $$1, $$2}'
 
 clean: clean-build clean-pyc
 
-clean-build:
+clean-build: ## remove build artifacts
 	rm -fr build/
 	rm -fr dist/
 	rm -fr *.egg-info
 
-clean-pyc:
+clean-pyc: ## remove Python file artifacts
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 
-lint:
+lint: ## check style with flake8
 	flake8 {{ cookiecutter.app_name }} tests
 
-test:
+test: ## run tests quickly with the default Python
 	python runtests.py tests
 
-test-all:
+test-all: ## run tests on every Python version with tox
 	tox
 
-coverage:
+coverage: ## check code coverage quickly with the default Python
 	coverage run --source {{ cookiecutter.app_name }} runtests.py tests
 	coverage report -m
 	coverage html
 	open htmlcov/index.html
 
-docs:
+docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/{{ cookiecutter.repo_name }}.rst
 	rm -f docs/modules.rst
 	sphinx-apidoc -o docs/ {{ cookiecutter.app_name }}
@@ -57,10 +50,10 @@ docs:
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
 
-release: clean
+release: clean ## package and upload a release
 	python setup.py sdist upload
 	python setup.py bdist_wheel upload
 
-sdist: clean
+sdist: clean ## package
 	python setup.py sdist
 	ls -l dist
