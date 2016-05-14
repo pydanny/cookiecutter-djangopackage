@@ -1,6 +1,6 @@
-==========================
-cookiecutter-djangopackage
-==========================
+===========================
+Cookiecutter Django Package
+===========================
 
 .. image:: https://travis-ci.org/pydanny/cookiecutter-djangopackage.svg?branch=master
     :target: https://travis-ci.org/pydanny/cookiecutter-djangopackage
@@ -13,7 +13,7 @@ often legacy code from one project to the other. This template, inspired by `coo
 is designed to allow Django developers the ability to break free from cargo-cult configuration and follow
 a common pattern dictated by the experts and maintained here.
 
-.. _cookiecutter: https://github.com/audreyr/cookiecutter
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
 
 Features
@@ -25,11 +25,12 @@ Features
 * Tox configuration
 * Sphinx Documentation
 * BSD licensed by default
+* Basic model generation
 
 Usage
 ------
 
-First, get cookiecutter. Trust me, it's awesome::
+First, get Cookiecutter_. Trust me, it's awesome::
 
     $ pip install cookiecutter
 
@@ -37,19 +38,18 @@ Now run it against this repo::
 
     $ cookiecutter https://github.com/pydanny/cookiecutter-djangopackage.git
 
-You'll be prompted for some questions, answer them, then it will create a cookiecutter-dj-package with
-your new package.
+You'll be prompted for some questions, answer them, then it will create a directory that is your new package.
 
 Let's pretend you want to create a reusable Django app called "Blogging-for-Humans", with an app that can be placed
 in INSTALLED_APPS as "blogging_humans". Rather than have to copy/paste from other people's projects and
 then fight enthusiasm destroying app layout issues like `setup.py` configuration and creating test
-harnesses, you get cookiecutter_ to do all the work.
+harnesses, you get Cookiecutter_ to do all the work.
 
 **Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
 
 It prompts you for questions. Answer them::
 
-    Cloning into 'cookiecutter-dj-package'...
+    Cloning into 'cookiecutter-djangopackage'...
     remote: Counting objects: 49, done.
     remote: Compressing objects: 100% (33/33), done.
     remote: Total 49 (delta 6), reused 48 (delta 5)
