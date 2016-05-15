@@ -41,7 +41,7 @@ Now run it against this repo::
 You'll be prompted for some questions, answer them, then it will create a directory that is your new package.
 
 Let's pretend you want to create a reusable Django app called "Blogging-for-Humans", with an app that can be placed
-in INSTALLED_APPS as "blogging_humans". Rather than have to copy/paste from other people's projects and
+in ``INSTALLED_APPS`` as "blogging_humans". Rather than have to copy/paste from other people's projects and
 then fight enthusiasm destroying app layout issues like `setup.py` configuration and creating test
 harnesses, you get Cookiecutter_ to do all the work.
 
