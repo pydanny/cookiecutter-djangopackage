@@ -2,6 +2,10 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2016-05-16]
+### Changed
+- Corrected datetime generation in `cookiecutter.json` (@kelseyq)
+
 ## [2016-05-13]
 ### Changed
 - Name to Cookiecutter Django Package (@pydanny)
