@@ -61,8 +61,9 @@ It prompts you for questions. Answer them::
     repo_name (default is "dj-package")? blogging-for-humans
     app_name (default is "djpackage")? blogging_humans
     project_short_description (default is "Your project description goes here")? A blog that's easy for humans to use!
-    release_date (default is "2016-02-01")? 2016-02-01
-    year (default is "2016")? 2016
+    models (optional comma-separated list of models)? blog,page,comment
+    release_date (default is today)? 2016-05-16
+    year (default is this year)? 2016
     version (default is "0.1.0")? 0.3.0
 
 Enter the project and take a look around::
