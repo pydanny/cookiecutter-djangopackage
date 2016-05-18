@@ -53,7 +53,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        {% if cookiecutter.models != "Comma-seperated list of models" %}
+        {% if cookiecutter.models != "Comma-separated list of models" %}
             "django-model-utils>=2.0",
         {% endif %}
     ],
