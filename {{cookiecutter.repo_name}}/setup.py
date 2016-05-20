@@ -11,7 +11,7 @@ except ImportError:
 
 
 def get_version(*file_paths):
-    filename = os.path.join(os.path.dirname(__file__), *parts)
+    filename = os.path.join(os.path.dirname(__file__), *file_paths)
     version_file = open(filename).read()
     version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
                               version_file, re.M)
@@ -53,6 +53,9 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
+        {% if cookiecutter.models != "Comma-separated list of models" %}
+            "django-model-utils>=2.0",
+        {% endif %}
     ],
     license="BSD",
     zip_safe=False,

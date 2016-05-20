@@ -28,4 +28,10 @@ Contributors
 * Grant Mcconnaughey / @grantmcconnaughey
 * @guilhermemaba
 * Jon Miller / @jondelmil
-* Jess Johnson / grokcode
+* Jess Johnson / @grokcode
+* David Stephens / @davidastephens
+* @jangeador
+* Chris Adams / @acdha
+* José Tomás Tocino / @JoseTomasTocino
+* Aaron Bassett / @aaronbassett
+* Kelsey Gilmore-Innis / @kelseyq 

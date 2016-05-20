@@ -6,7 +6,8 @@
   "repo_name": "dj-package",
   "app_name": "djpackage",
   "project_short_description": "Your project description goes here",
-  "release_date": "2016-02-01",
-  "year": "2016",
+  "models": "Comma-separated list of models",
+  "release_date": "{% now 'local' %}",
+  "year": "{% now 'local', '%Y' %}",
   "version": "0.1.0"
 }
