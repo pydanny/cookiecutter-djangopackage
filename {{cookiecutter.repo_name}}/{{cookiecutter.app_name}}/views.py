@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+{% if cookiecutter.models != "Comma-separated list of models" -%}
 from django.views.generic import (
     CreateView,
     DeleteView,
@@ -26,4 +27,5 @@ class {{ model }}{{ view }}({{ view }}):
     model = {{ model }}
 
 {% endfor -%}
-{% endfor %}
+{% endfor -%}
+{% endif -%}
