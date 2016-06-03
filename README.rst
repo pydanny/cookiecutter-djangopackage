@@ -30,7 +30,9 @@ Features
 Usage
 ------
 
-First, get Cookiecutter_. Trust me, it's awesome::
+First, create your empty repo on Github (in our example below, we would call it ``blogging_for_humans``) and set up your virtual environment with your favorite method.
+
+Now, get Cookiecutter_. Trust me, it's awesome::
 
     $ pip install cookiecutter
 
@@ -41,8 +43,8 @@ Now run it against this repo::
 You'll be prompted for some questions, answer them, then it will create a directory that is your new package.
 
 Let's pretend you want to create a reusable Django app called "Blogging-for-Humans", with an app that can be placed
-in ``INSTALLED_APPS`` as "blogging_humans". Rather than have to copy/paste from other people's projects and
-then fight enthusiasm destroying app layout issues like `setup.py` configuration and creating test
+in ``INSTALLED_APPS`` as "blogging_for_humans". Rather than have to copy/paste from other people's projects and
+then fight enthusiasm-destroying app layout issues like `setup.py` configuration and creating test
 harnesses, you get Cookiecutter_ to do all the work.
 
 **Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
@@ -58,8 +60,8 @@ It prompts you for questions. Answer them::
     email [you@example.com]: pydanny@gmail.com
     github_username [yourname]: pydanny
     project_name [dj-package]: Blogging-for-Humans
-    repo_name [blogging-for-humans]: blogging-for-humans
-    app_name [djpackage]: blogging_humans
+    repo_name [blogging_for_humans]: blogging_for_humans
+    app_name [blogging_for_humans]: blogging_for_humans
     project_short_description [Your project description goes here]: A sample Django package
     models [Comma-separated list of models]: Scoop, Flavor
     django_versions [1.8,1.9]: 1.8,1.9,1.10
@@ -69,15 +71,15 @@ It prompts you for questions. Answer them::
 
 Enter the project and take a look around::
 
-    $ cd blogging-for-humans/
+    $ cd blogging_for_humans/
     $ ls
 
 Create a GitHub repo and push it there::
 
     $ git init
     $ git add .
-    $ git commit -m "first awesome commit!"
-    $ git remote add origin git@github.com:pydanny/blogging-for-humans.git
+    $ git commit -m "first awesome commit"
+    $ git remote add origin git@github.com:pydanny/blogging_for_humans.git
     $ git push -u origin master
 
 Now take a look at your repo. Awesome, right?
@@ -92,7 +94,7 @@ Code has been written, but does it actually work? Let's find out!
 ::
 
     source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install -r requirements-test.txt
+    (myenv) $ pip install -r requirements_test.txt
     (myenv) $ python runtests.py
 
 Register on PyPI

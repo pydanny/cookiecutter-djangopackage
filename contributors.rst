@@ -43,3 +43,4 @@ Contributors
 * José Tomás Tocino / @JoseTomasTocino
 * Aaron Bassett / @aaronbassett
 * Kelsey Gilmore-Innis / @kelseyq
+* Diane DeMers Chen / @purplediane
