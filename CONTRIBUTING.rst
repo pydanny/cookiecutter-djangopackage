@@ -57,7 +57,7 @@ Get Started!
 ------------
 
 Ready to contribute? Here's how to set up `cookiecutter-djangopackage`_ for local development. Please note this documentation assumes you have a `GitHub`_ account,
-you already have `virtualenv`_ and `Git`_ installed and ready to go.
+you already have `virtualenv`_ and `Git`_ installed and ready to go. If you are using Python 3.5, you already have virtualenv, as it comes with Python 3.5.
 
 1. Fork the `cookiecutter-djangopackage`_ repo on GitHub.
 2. Clone your fork locally::
@@ -70,7 +70,8 @@ you already have `virtualenv`_ and `Git`_ installed and ready to go.
     $ virtualenv cookiecutter-djangopackage-env
     $ source cookiecutter-djangopackage-env/bin/activate
 
-   This should change the shell to look something like
+   This should change the shell to look something like::
+
     (cookiecutter-djangopackage-env) $
 
 4. Create a branch for local development::
@@ -99,8 +100,7 @@ you already have `virtualenv`_ and `Git`_ installed and ready to go.
 
     $ tox
 
-.. note::
-      If you are missing flake8, pytest and/or tox, just pip install them into your virtualenv.
+   .. note:: If you are missing flake8, pytest and/or tox, just pip install them into your virtualenv.
 
 8. Commit your changes and push your branch to GitHub::
 
@@ -108,7 +108,7 @@ you already have `virtualenv`_ and `Git`_ installed and ready to go.
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
-9. Submit a pull request through the GitHub website.
+9. Submit a pull request through the GitHub website. See Guidelines below.
 
 Pull Request Guidelines
 -----------------------
