@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 {% if cookiecutter.models != "Comma-separated list of models" -%}
+# -*- coding: utf-8 -*-
 from django.views.generic import (
     CreateView,
     DeleteView,
@@ -22,9 +22,9 @@ from .models import ({% for model in cookiecutter.models.split(',') %}
 
 {% for model in cookiecutter.models.split(',') -%}
 {% for view in views %}
-class {{ model }}{{ view }}({{ view }}):
+class {{ model.strip() }}{{ view }}({{ view }}):
 
-    model = {{ model }}
+    model = {{ model.strip() }}
 
 {% endfor -%}
 {% endfor -%}
