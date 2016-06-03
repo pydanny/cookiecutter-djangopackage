@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2016-06-03]
 ### Changed
 - Updated usage and fix requirements (@purplediane)
+- Expanded tests (@purplediane)
 
 ## [2016-06-02]
 ### Added
