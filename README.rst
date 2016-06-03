@@ -32,6 +32,8 @@ Usage
 
 First, create your empty repo on Github (in our example below, we would call it ``blogging_for_humans``) and set up your virtual environment with your favorite method.
 
+**Note**: Your project will be created with README.rst file containing a pypi badge, a travis-ci badge and a link to documentation on readthedocs.org. You don't need to have these accounts set up before using Cookiecutter or cookiecutter-djangopackage.
+
 Now, get Cookiecutter_. Trust me, it's awesome::
 
     $ pip install cookiecutter

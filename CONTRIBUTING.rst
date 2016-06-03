@@ -38,13 +38,13 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-`cookiecutter-pypackage` could always use more documentation, whether as part of the
+`cookiecutter-djangopackage`_ could always use more documentation, whether as part of the
 official docs, in docstrings, or even on the web in blog posts, articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/audreyr/cookiecutter-pypackage/issues.
+The best way to send feedback is to file an issue at https://github.com/pydanny/cookiecutter-djangopackage/issues.
 
 If you are proposing a feature:
 
@@ -56,22 +56,23 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `cookiecutter-pypackage` for local development. Please note this documentation assumes
-you already have `virtualenv` and `Git` installed and ready to go.
+Ready to contribute? Here's how to set up `cookiecutter-djangopackage`_ for local development. Please note this documentation assumes you have a `GitHub`_ account,
+you already have `virtualenv`_ and `Git`_ installed and ready to go. If you are using Python 3.5, you already have virtualenv, as it comes with Python 3.5.
 
-1. Fork the `cookiecutter-pypackage` repo on GitHub.
+1. Fork the `cookiecutter-djangopackage`_ repo on GitHub.
 2. Clone your fork locally::
 
     $ cd path_for_the_repo
-    $ git clone git@github.com:YOUR_NAME/cookiecutter-pypackage.git
+    $ git clone git@github.com:YOUR_NAME/cookiecutter-djangopackage.git
 
 3. Assuming you have virtualenv installed (If you have Python3.5 this should already be there), you can create a new environment for your local development by typing::
 
-    $ virtualenv cookiecutter-pypackage-env
-    $ source cookiecutter-pypackage-env/bin/activate
+    $ virtualenv cookiecutter-djangopackage-env
+    $ source cookiecutter-djangopackage-env/bin/activate
 
-    This should change the shell to look something like
-    (cookiecutter-pypackage-env) $
+   This should change the shell to look something like::
+
+    (cookiecutter-djangopackage-env) $
 
 4. Create a branch for local development::
 
@@ -84,7 +85,7 @@ you already have `virtualenv` and `Git` installed and ready to go.
 
     $ flake8 ./tests
 
-6. The next step would be to run the test cases. `cookiecutter-pypackage` uses py.test, you can run PyTest. Before you run pytest you should ensure all dependancies are installed::
+6. The next step would be to run the test cases. `cookiecutter-djangopackage`_ uses py.test, you can run PyTest. Before you run pytest you should ensure all dependancies are installed::
 
     $ pip install -rrequirements_dev.txt
     $ py.test ./tests
@@ -99,8 +100,7 @@ you already have `virtualenv` and `Git` installed and ready to go.
 
     $ tox
 
-   .. note::
-      If you are missing flake8, pytest and/or tox, just pip install them into your virtualenv.
+   .. note:: If you are missing flake8, pytest and/or tox, just pip install them into your virtualenv.
 
 8. Commit your changes and push your branch to GitHub::
 
@@ -108,7 +108,7 @@ you already have `virtualenv` and `Git` installed and ready to go.
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
-9. Submit a pull request through the GitHub website.
+9. Submit a pull request through the GitHub website. See Guidelines below.
 
 Pull Request Guidelines
 -----------------------
@@ -124,6 +124,7 @@ Before you submit a pull request, check that it meets these guidelines:
    and make sure that the tests pass for all supported Python versions.
 
 
-.. cookiecutter: https://github.com/audreyr/cookiecutter-pypackage
-.. virtualenv: https://virtualenv.pypa.io/en/stable/installation
-.. git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+.. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+.. _`virtualenv`: https://virtualenv.pypa.io/en/stable/installation
+.. _`Git`: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+.. _`GitHub`: https://github.com/
