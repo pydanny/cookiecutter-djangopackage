@@ -54,17 +54,18 @@ It prompts you for questions. Answer them::
     remote: Compressing objects: 100% (33/33), done.
     remote: Total 49 (delta 6), reused 48 (delta 5)
     Unpacking objects: 100% (49/49), done.
-    full_name (default is "Your full name here")? Daniel Greenfeld
-    email (default is "you@example.com")? pydanny@gmail.com
-    github_username (default is "yourname")? pydanny
-    project_name (default is "dj-package")? Blogging-for-Humans
-    repo_name (default is "dj-package")? blogging-for-humans
-    app_name (default is "djpackage")? blogging_humans
-    project_short_description (default is "Your project description goes here")? A blog that's easy for humans to use!
-    models (optional comma-separated list of models)? blog,page,comment
-    release_date (default is today)? 2016-05-16
-    year (default is this year)? 2016
-    version (default is "0.1.0")? 0.3.0
+    full_name [Your full name here]: Daniel Roy Greenfeld
+    email [you@example.com]: pydanny@gmail.com
+    github_username [yourname]: pydanny
+    project_name [dj-package]:
+    repo_name [dj-package]:
+    app_name [djpackage]:
+    project_short_description [Your project description goes here]: A sample Django package
+    models [Comma-separated list of models]: Scoop, Flavor
+    django_versions [1.8,1.9]:
+    release_date [2016-06-02]:
+    year [2016]:
+    version [0.1.0]:
 
 Enter the project and take a look around::
 
