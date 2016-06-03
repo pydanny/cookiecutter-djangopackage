@@ -2,10 +2,13 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2016-06-03]
+### Changed
+- Updated usage and fix requirements (@purplediane)
+
 ## [2016-06-02]
 ### Added
 - pytest-cookies (@pydanny)
-- tox config (@pydanny)
 - tox config (@pydanny)
 
 ## [2016-06-01]
