@@ -74,7 +74,7 @@ def test_authors(cookies):
     extra_context = {'full_name': 'Cookie McCookieface'}
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
 
-        authors_file = result.project.join('authors.rst')
+        authors_file = result.project.join('AUTHORS.rst')
         authors_text = authors_file.read()
         assert 'Cookie McCookieface' in authors_text
 
@@ -82,7 +82,7 @@ def test_manifest(cookies):
     extra_context = {'app_name': 'cookie_lover'}
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
 
-        manifest_file = result.project.join('manifest.in')
+        manifest_file = result.project.join('MANIFEST.in')
         manifest_text = manifest_file.read()
         assert 'recursive-include cookie_lover *.html *.png *.gif *js *.css *jpg *jpeg *svg *py' in manifest_text
 
