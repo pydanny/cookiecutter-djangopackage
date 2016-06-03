@@ -1,13 +1,17 @@
 language: python
 
-python:
-  - "3.5"
-  - "3.4"
-  - "2.7"
-  - "pypy"
+python: 3.5
+env:
+  - TOXENV=py27
+  - TOXENV=py33
+  - TOXENV=py34
+  - TOXENV=py35
 
 install:
-  - pip install cookiecutter
+  - pip install -U tox
 
 script:
-  - cookiecutter . --no-input
+  - tox
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
