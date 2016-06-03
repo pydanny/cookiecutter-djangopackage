@@ -57,15 +57,15 @@ It prompts you for questions. Answer them::
     full_name [Your full name here]: Daniel Roy Greenfeld
     email [you@example.com]: pydanny@gmail.com
     github_username [yourname]: pydanny
-    project_name [dj-package]:
-    repo_name [dj-package]:
-    app_name [djpackage]:
+    project_name [dj-package]: Blogging-for-Humans
+    repo_name [blogging-for-humans]: blogging-for-humans
+    app_name [djpackage]: blogging_humans
     project_short_description [Your project description goes here]: A sample Django package
     models [Comma-separated list of models]: Scoop, Flavor
-    django_versions [1.8,1.9]:
-    release_date [2016-06-02]:
-    year [2016]:
-    version [0.1.0]:
+    django_versions [1.8,1.9]: 1.8,1.9,1.10
+    release_date [2016-06-02]: 2016-06-03
+    year [2016]: 2016
+    version [0.1.0]: 0.1.0
 
 Enter the project and take a look around::
 
