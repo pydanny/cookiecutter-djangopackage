@@ -45,11 +45,59 @@ def test_readme(cookies):
 def test_models(cookies):
     pass
 
-def test_views(cookies):
-    pass
 
-def test_urls(cookies):
-    pass
+def test_views_with_models(cookies):
+    """
+    Test case to assert if the views are created when the models are passed
+    """
+    extra_context = {'models': 'Pug,Dog', 'app_name': 'cookies'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+        views_file = result.project.join('cookies', 'views.py')
+        views_file_txt = views_file.read()
+        views = ['CreateView', 'DeleteView', 'DetailView', 'UpdateView', 'ListView']
+        for view in views:
+            assert 'Pug{}'.format(view) in views_file_txt
+            assert 'Dog{}'.format(view) in views_file_txt
+
+
+def test_views_without_models(cookies):
+    """
+    Test case to assert that the views.py file is empty when there are no models defined
+    """
+    extra_context = {'app_name': 'cookies'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+        views_file = result.project.join('cookies', 'views.py')
+        views_file_txt = views_file.read()
+        assert views_file_txt == ''
+
+
+def test_urls_regex_with_model(cookies):
+    """
+    Test case to assert that the urls.py file is created when models are passed
+    """
+    extra_context = {'models': 'Pug,Dog', 'app_name': 'cookies'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+        urls_file = result.project.join('cookies', 'urls.py')
+        urls_file_txt = urls_file.read()
+        for model in extra_context['models'].split(','):
+            assert '^{}/~create/$'.format(model) in urls_file_txt
+            assert '^{}/(?P<pk>\d+)/~delete/$'.format(model) in urls_file_txt
+            assert '^{}/(?P<pk>\d+)/$'.format(model) in urls_file_txt
+            assert '^{}/(?P<pk>\d+)/~update/$'.format(model) in urls_file_txt
+            assert '^{}/$'.format(model) in urls_file_txt
+
+
+def test_urls_without_model(cookies):
+    """
+    Test case to assert that the urls.py file has the basic template when there are no models defined
+    """
+    extra_context = {'app_name': 'cookies'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+        urls_file = result.project.join('cookies', 'urls.py')
+        urls_file_txt = urls_file.read()
+        basic_url = "url(r'', TemplateView.as_view(template_name=\"base.html\"))"
+        assert basic_url in urls_file_txt
+
 
 def test_templates(cookies):
     pass
