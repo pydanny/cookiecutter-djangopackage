@@ -1,8 +1,16 @@
 Contributors
 =============
 
+Leads
+------
+
 * Daniel Roy Greenfeld / @pydanny
 * Audrey Roy Greenfeld / @audreyr
+* Kelsey Gilmore-Innis / @kelseyq
+
+Contributors
+--------------
+
 * Jakh Daven / @tuxcanfly
 * Raphi / @raphigaziano
 * Aaron Bassett / @aaronbassett
@@ -34,4 +42,4 @@ Contributors
 * Chris Adams / @acdha
 * José Tomás Tocino / @JoseTomasTocino
 * Aaron Bassett / @aaronbassett
-* Kelsey Gilmore-Innis / @kelseyq 
+* Kelsey Gilmore-Innis / @kelseyq

@@ -2,6 +2,16 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2016-06-02]
+### Added
+- pytest-cookies (@pydanny)
+- tox config (@pydanny)
+- tox config (@pydanny)
+
+## [2016-06-01]
+### Added
+- ability to specify django versions to run tox against rendered project (@kelseyq)
+
 ## [2016-05-16]
 ### Changed
 - Corrected datetime generation in `cookiecutter.json` (@kelseyq)
