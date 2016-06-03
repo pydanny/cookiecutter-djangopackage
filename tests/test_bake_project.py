@@ -43,7 +43,13 @@ def test_readme(cookies):
 
 
 def test_models(cookies):
-    pass
+    extra_context = {'models': 'ChocolateChip,Zimsterne', 'app_name': 'cookies'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+
+        model_file = result.project.join('cookies', 'models.py')
+        model_txt = model_file.read()
+        assert 'TimeStampedModel' in model_txt
+
 
 def test_views(cookies):
     pass
@@ -56,19 +62,39 @@ def test_templates(cookies):
 
 
 def test_travis(cookies):
-    pass
+    extra_context = {'app_name': 'cookie_lover'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+
+        travis_file = result.project.join('.travis.yml')
+        travis_text = travis_file.read()
+        assert 'script: coverage run --source cookie_lover runtests.py' in travis_text
 
 
 def test_authors(cookies):
-    pass
+    extra_context = {'full_name': 'Cookie McCookieface'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
 
+        authors_file = result.project.join('AUTHORS.rst')
+        authors_text = authors_file.read()
+        assert 'Cookie McCookieface' in authors_text
 
 def test_manifest(cookies):
-    pass
+    extra_context = {'app_name': 'cookie_lover'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+
+        manifest_file = result.project.join('MANIFEST.in')
+        manifest_text = manifest_file.read()
+        assert 'recursive-include cookie_lover *.html *.png *.gif *js *.css *jpg *jpeg *svg *py' in manifest_text
 
 
 def test_setup_py(cookies):
-    pass
+    extra_context = {'app_name': 'cookie_lover', 'full_name': 'Cookie McCookieface'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+
+        setup_file = result.project.join('setup.py')
+        setup_text = setup_file.read()
+        assert "version = get_version('cookie_lover', '__init__.py')" in setup_text
+        assert "    author='Cookie McCookieface'," in setup_text
 
 
 ## example project tests from here on

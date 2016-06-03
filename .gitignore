@@ -18,6 +18,9 @@ develop-eggs
 lib
 lib64
 
+# Created during tests
+.cache/
+
 # Installer logs
 pip-log.txt
 
