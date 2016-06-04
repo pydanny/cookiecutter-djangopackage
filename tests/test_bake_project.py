@@ -19,6 +19,7 @@ def inside_dir(dirpath):
     finally:
         os.chdir(old_path)
 
+
 @contextmanager
 def bake_in_temp_dir(cookies, *args, **kwargs):
     """
@@ -30,6 +31,22 @@ def bake_in_temp_dir(cookies, *args, **kwargs):
         yield result
     finally:
         rmtree(str(result.project))
+
+
+def test_bake_selecting_license(cookies):
+    """
+    Test to check if the LICENSE gets the correct license selected
+    """
+    license_strings = {
+        'Apache Software License 2.0': 'Apache',
+        'BSD': 'Redistributions of source code must retain the above copyright notice, this',
+        'ISCL': 'Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee',
+        'MIT': 'MIT ',
+    }
+    for license, target_string in license_strings.items():
+        with bake_in_temp_dir(cookies, extra_context={'open_source_license': license}) as result:
+            assert target_string in result.project.join('LICENSE').read()
+            assert license in result.project.join('setup.py').read()
 
 
 def test_readme(cookies):
@@ -60,7 +77,8 @@ def test_views_with_models(cookies):
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
         views_file = result.project.join('cookies', 'views.py')
         views_file_txt = views_file.read()
-        views = ['CreateView', 'DeleteView', 'DetailView', 'UpdateView', 'ListView']
+        views = ['CreateView', 'DeleteView',
+                 'DetailView', 'UpdateView', 'ListView']
         for view in views:
             assert 'Pug{}'.format(view) in views_file_txt
             assert 'Dog{}'.format(view) in views_file_txt
@@ -145,4 +163,4 @@ def test_setup_py(cookies):
         assert "    author='Cookie McCookieface'," in setup_text
 
 
-## example project tests from here on
+# example project tests from here on
