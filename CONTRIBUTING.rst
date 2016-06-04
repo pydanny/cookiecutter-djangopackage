@@ -82,7 +82,7 @@ you already have `virtualenv`_ and `Git`_ installed and ready to go. If you are 
 
 5. The next step would be to run the test cases. `cookiecutter-djangopackage`_ uses py.test, you can run PyTest. Before you run pytest you should ensure all dependancies are installed::
 
-    $ pip install -rrequirements_dev.txt
+    $ pip install -r requirements_dev.txt
     $ py.test
 
    If you get any errors while installing cryptography package (something like #include <openssl/aes.h>).

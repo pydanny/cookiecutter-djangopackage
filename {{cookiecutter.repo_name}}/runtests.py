@@ -34,7 +34,8 @@ try:
 except ImportError:
     import traceback
     traceback.print_exc()
-    raise ImportError("To fix this error, run: pip install -r requirements-test.txt")
+    msg = "To fix this error, run: pip install -r requirements-test.txt"
+    raise ImportError(msg)
 
 
 def run_tests(*test_args):

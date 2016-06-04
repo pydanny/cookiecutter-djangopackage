@@ -1,9 +1,12 @@
 from contextlib import contextmanager
-import shlex
-import os
-import subprocess
 import datetime
+import os
+import shlex
+import subprocess
+
 from cookiecutter.utils import rmtree
+import sh
+import pytest
 
 
 @contextmanager
@@ -162,5 +165,21 @@ def test_setup_py(cookies):
         assert "version = get_version('cookie_lover', '__init__.py')" in setup_text
         assert "    author='Cookie McCookieface'," in setup_text
 
+
+def test_flake8_compliance(cookies):
+    """generated project should pass flake8"""
+    extra_context = {'create_example_project': 'Y'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+        for file_obj in result.project.listdir():
+            name = os.path.join(
+                file_obj.dirname,
+                file_obj.basename
+            )
+            if not name.endswith('.py'):
+                continue
+            try:
+                sh.flake8(name)
+            except sh.ErrorReturnCode as e:
+                pytest.fail(str(e))
 
 # example project tests from here on
