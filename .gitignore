@@ -20,6 +20,7 @@ lib64
 
 # Created during tests
 .cache/
+dj_package/
 
 # Installer logs
 pip-log.txt

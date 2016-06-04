@@ -2,6 +2,11 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2016-06-04]
+### Added
+- Makefile watchme for template generation (@pydanny)
+- `post_gen_project.py` for removing example project if needed (@pydanny)
+
 ## [2016-06-03]
 ### Added
 - Views and urls based on specified model names (@leportella)

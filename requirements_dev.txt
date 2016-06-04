@@ -3,3 +3,4 @@ pytest-cookies
 pytest==2.9.2
 tox==2.1.1
 pytest-cov
+watchdog
