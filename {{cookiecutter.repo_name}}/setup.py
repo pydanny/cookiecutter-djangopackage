@@ -31,6 +31,7 @@ version = get_version('{{ cookiecutter.app_name }}', '__init__.py')
 if sys.argv[-1] == 'publish':
     try:
         import wheel
+        print("Wheel version: ", wheel.__version__)
     except ImportError:
         print('Wheel library missing. Please run "pip install wheel"')
         sys.exit()
@@ -59,11 +60,7 @@ setup(
         '{{ cookiecutter.app_name }}',
     ],
     include_package_data=True,
-    install_requires=[
-        {% if cookiecutter.models != "Comma-separated list of models" %}
-            "django-model-utils>=2.0",
-        {% endif %}
-    ],
+    install_requires=[{% if cookiecutter.models != "Comma-separated list of models" %}"django-model-utils>=2.0",{% endif %}],
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}

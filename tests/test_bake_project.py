@@ -170,13 +170,16 @@ def test_flake8_compliance(cookies):
     """generated project should pass flake8"""
     extra_context = {'create_example_project': 'Y'}
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
-        for file_name in result.project.listdir():
+        for file_obj in result.project.listdir():
+            name = os.path.join(
+                file_obj.dirname,
+                file_obj.basename
+            )
+            if not name.endswith('.py'):
+                continue
             try:
-                text = file_name.open().read()
-                print(text)
-                print(type(text))
-                sh.flake8(text)
+                sh.flake8(name)
             except sh.ErrorReturnCode as e:
-                pytest.fail(e)
+                pytest.fail(str(e))
 
 # example project tests from here on
