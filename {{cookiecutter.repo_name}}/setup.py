@@ -9,6 +9,13 @@ try:
 except ImportError:
     from distutils.core import setup
 
+{%- set license_classifiers = {
+    'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
+    'BSD': 'License :: OSI Approved :: BSD License',
+    'ISCL': 'License :: OSI Approved :: ISC License (ISCL)',
+    'MIT': 'License :: OSI Approved :: MIT License',
+} %}
+
 
 def get_version(*file_paths):
     filename = os.path.join(os.path.dirname(__file__), *file_paths)
@@ -57,7 +64,9 @@ setup(
             "django-model-utils>=2.0",
         {% endif %}
     ],
-    license="BSD",
+{%- if cookiecutter.open_source_license in license_classifiers %}
+    license="{{ cookiecutter.open_source_license }}",
+{%- endif %}
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
