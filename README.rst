@@ -51,7 +51,7 @@ harnesses, you get Cookiecutter_ to do all the work.
 
 **Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
 
-It prompts you for questions. Answer them::
+It prompts you for information that it uses to create the app, with defaults in square brackets. Answer them::
 
     Cloning into 'cookiecutter-djangopackage'...
     remote: Counting objects: 49, done.
@@ -62,12 +62,20 @@ It prompts you for questions. Answer them::
     email [you@example.com]: pydanny@gmail.com
     github_username [yourname]: pydanny
     project_name [dj-package]: Blogging-for-Humans
-    repo_name [blogging_for_humans]: blogging_for_humans
-    app_name [blogging_for_humans]: blogging_for_humans
+    repo_name [blogging_for_humans]:
+    app_name [blogging_for_humans]:
     project_short_description [Your project description goes here]: A sample Django package
     models [Comma-separated list of models]: Scoop, Flavor
-    django_versions [1.8,1.9]: 1.8,1.9,1.10
-    version [0.1.0]: 0.1.0
+    django_versions [1.8,1.9]:
+    version [0.1.0]:
+    create_example_project [N]:
+    Select open_source_license:
+    1 - MIT
+    2 - BSD
+    3 - ISCL
+    4 - Apache Software License 2.0
+    5 - Not open source
+    Choose from 1, 2, 3, 4, 5 [1]:
 
 Enter the project and take a look around::
 
