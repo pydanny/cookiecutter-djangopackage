@@ -1,7 +1,7 @@
 cookiecutter
 pytest-cookies
 pytest==2.9.2
-tox==2.1.1
+tox==2.3.1
 pytest-cov
 watchdog
 sh==1.11
