@@ -6,7 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Makefile watchme for template generation (@pydanny)
 - `post_gen_project.py` for removing example project if needed (@pydanny)
-- flake8 on generated Python code
+- flake8 on generated Python code (@pydanny)
+- Issue template (@purplediane)
+
+### Changed
+- 
 
 ## [2016-06-03]
 ### Added

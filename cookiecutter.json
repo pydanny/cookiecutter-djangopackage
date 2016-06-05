@@ -8,8 +8,6 @@
   "project_short_description": "Your project description goes here",
   "models": "Comma-separated list of models",
   "django_versions": "1.8,1.9",
-  "release_date": "{% now 'local' %}",
-  "year": "{% now 'local', '%Y' %}",
   "version": "0.1.0",
   "create_example_project": "N",
   "open_source_license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"]

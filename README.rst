@@ -67,8 +67,6 @@ It prompts you for questions. Answer them::
     project_short_description [Your project description goes here]: A sample Django package
     models [Comma-separated list of models]: Scoop, Flavor
     django_versions [1.8,1.9]: 1.8,1.9,1.10
-    release_date [2016-06-02]: 2016-06-03
-    year [2016]: 2016
     version [0.1.0]: 0.1.0
 
 Enter the project and take a look around::
