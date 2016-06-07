@@ -166,6 +166,54 @@ def test_setup_py(cookies):
         assert "    author='Cookie McCookieface'," in setup_text
 
 
+def test_django_versions_default(cookies):
+    """
+    Test case to assert that the tox.ini & setup.py files are generated with correct versions w default Django versions
+    """
+
+    with bake_in_temp_dir(cookies) as result:
+
+        tox_file = result.project.join('tox.ini')
+        tox_text = tox_file.read()
+        assert "{py27,py32,py33,py34,py35}-django18" in tox_text
+        assert "{py27,py34,py35}-django19" in tox_text
+        setup_file = result.project.join('setup.py')
+        setup_text = setup_file.read()
+        assert "'Framework :: Django :: 1.8'," in setup_text
+        assert "'Framework :: Django :: 1.9'," in setup_text
+        assert "'Programming Language :: Python :: 2'," in setup_text
+        assert "'Programming Language :: Python :: 2.7'," in setup_text
+        assert "'Programming Language :: Python :: 3'," in setup_text
+        assert "'Programming Language :: Python :: 3.2'," in setup_text
+        assert "'Programming Language :: Python :: 3.3'," in setup_text
+        assert "'Programming Language :: Python :: 3.4'," in setup_text
+        assert "'Programming Language :: Python :: 3.5'," in setup_text
+
+
+def test_new_django_versions(cookies):
+    """
+    Test case to assert that the tox.ini & setup.py files are generated with correct versions with a new Django version
+    """
+
+    extra_context = {'django_versions': '1.10'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+
+        tox_file = result.project.join('tox.ini')
+        tox_text = tox_file.read()
+        assert "{py27,py34,py35}-django110" in tox_text
+        assert 'django19' not in tox_text
+        setup_file = result.project.join('setup.py')
+        setup_text = setup_file.read()
+        assert "'Framework :: Django :: 1.10'," in setup_text
+        assert "'Framework :: Django :: 1.9'," not in setup_text
+        assert "'Programming Language :: Python :: 2'," in setup_text
+        assert "'Programming Language :: Python :: 2.7'," in setup_text
+        assert "'Programming Language :: Python :: 3'," in setup_text
+        assert "'Programming Language :: Python :: 3.4'," in setup_text
+        assert "'Programming Language :: Python :: 3.5'," in setup_text
+        assert "'Programming Language :: Python :: 3.3'," not in setup_text
+
+
 def test_flake8_compliance(cookies):
     """generated project should pass flake8"""
     extra_context = {'create_example_project': 'Y'}
