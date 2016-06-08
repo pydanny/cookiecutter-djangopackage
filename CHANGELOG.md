@@ -2,6 +2,10 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2016-06-08]
+### Changed
+- tox.ini file made more compact (@kelseyq)
+
 ## [2016-06-04]
 ### Added
 - Makefile watchme for template generation (@pydanny)
