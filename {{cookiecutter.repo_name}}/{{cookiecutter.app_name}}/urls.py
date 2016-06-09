@@ -35,5 +35,5 @@ urlpatterns = [
         name='{{ model.strip() }}_list',
     ),
 	{% endfor -%}
-    {% endif %}
+    {% endif -%}
 ]
