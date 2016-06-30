@@ -38,7 +38,7 @@ Contributors
 * Jon Miller / @jondelmil
 * Jess Johnson / @grokcode
 * David Stephens / @davidastephens
-* @jangeador
+* Delio Castillo / @jangeador
 * Chris Adams / @acdha
 * José Tomás Tocino / @JoseTomasTocino
 * Aaron Bassett / @aaronbassett
