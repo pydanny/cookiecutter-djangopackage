@@ -116,7 +116,16 @@ Once you've got at least a prototype working and tests running, it's time to reg
 Releasing on PyPI
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Time to release a new version? Easy! Just run::
+Time to release a new version? Easy!
+
+First, use `bumpversion` to up the release number::
+
+    $ pip install bumpversion
+    $ bumpversion --current-version VERSION_NUMBER minor --config-file setup.cfg
+
+Where `VERSION_NUMBER` is the current version, e.g. `0.1.0`.
+
+Then run::
 
     $ python setup.py publish
 
