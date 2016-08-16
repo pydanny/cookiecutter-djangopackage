@@ -66,7 +66,7 @@ It prompts you for information that it uses to create the app, with defaults in 
     app_name [blogging_for_humans]:
     project_short_description [Your project description goes here]: A sample Django package
     models [Comma-separated list of models]: Scoop, Flavor
-    django_versions [1.8,1.9]:
+    django_versions [1.8,1.9,1.10]:
     version [0.1.0]:
     create_example_project [N]:
     Select open_source_license:
