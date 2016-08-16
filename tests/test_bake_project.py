@@ -162,7 +162,7 @@ def test_setup_py(cookies):
 
         setup_file = result.project.join('setup.py')
         setup_text = setup_file.read()
-        assert "version = get_version('cookie_lover', '__init__.py')" in setup_text
+        assert "version=version" in setup_text
         assert "    author='Cookie McCookieface'," in setup_text
 
 
