@@ -6,4 +6,4 @@ tox==2.4.1
 pytest-cov==2.4.0
 watchdog==0.8.3
 sh==1.11
-flake8==3.0.4
+flake8==3.2.0
