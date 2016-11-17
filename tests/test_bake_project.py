@@ -230,4 +230,17 @@ def test_flake8_compliance(cookies):
             except sh.ErrorReturnCode as e:
                 pytest.fail(str(e))
 
+
+def test_app_config(cookies):
+    extra_context = {'app_name': 'cookie_lover'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+
+        apps_file = result.project.join('cookie_lover', 'apps.py')
+        apps_text = apps_file.read()
+        assert 'CookieLoverConfig' in apps_text
+        assert "name = 'cookie_lover'" in apps_text
+        init_file = result.project.join('cookie_lover', '__init__.py')
+        init_text = init_file.read()
+        assert "default_app_config = 'cookie_lover.apps.CookieLoverConfig'" in init_text
+
 # example project tests from here on
