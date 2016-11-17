@@ -4,18 +4,36 @@ language: python
 
 python:
   - "3.5"
-  - "3.4"
-  - "3.3"
-  - "2.7"
 
-before_install:
-  - pip install codecov
+env: {% if '1.8' in cookiecutter.django_versions %}
+  - TOX_ENV=py35-django-18
+  - TOX_ENV=py34-django-18
+  - TOX_ENV=py33-django-18
+  - TOX_ENV=py32-django-18
+  - TOX_ENV=py27-django-18{% endif %}{% if '1.9' in cookiecutter.django_versions %}
+  - TOX_ENV=py35-django-19
+  - TOX_ENV=py34-django-19
+  - TOX_ENV=py27-django-19{% endif %}{% if '1.10' in cookiecutter.django_versions %}
+  - TOX_ENV=py35-django-110
+  - TOX_ENV=py34-django-110
+  - TOX_ENV=py27-django-110{% endif %}{% if 'master' in cookiecutter.django_versions %}
+  - TOX_ENV=py34-django-master
+  - TOX_ENV=py35-django-master
+  - TOX_ENV=py27-django-master{% endif %}
+
+matrix:
+  fast_finish: true{% if 'master' in cookiecutter.django_versions %}
+  allow_failures:
+    - env: TOX_ENV=py27-django-master
+    - env: TOX_ENV=py34-django-master
+    - env: TOX_ENV=py35-django-master{% endif %}
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements_test.txt
 
 # command to run tests using coverage, e.g. python setup.py test
-script: coverage run --source {{ cookiecutter.app_name }} runtests.py
+script:
+  - tox -e $TOX_ENV
 
 after_success:
-  - codecov
+  - codecov -e TOX_ENV
