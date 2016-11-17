@@ -22,9 +22,28 @@ Install {{ cookiecutter.project_name }}::
 
     pip install {{ cookiecutter.repo_name }}
 
-Then use it in a project::
+Add it to your `INSTALLED_APPS`:
 
-    import {{ cookiecutter.app_name }}
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        '{{ cookiecutter.app_name }}',
+        ...
+    )
+
+Add {{ cookiecutter.project_name }}'s URL patterns:
+
+.. code-block:: python
+
+    from {{ cookiecutter.app_name }} import urls as {{ cookiecutter.app_name }}_urls
+
+
+    urlpatterns = [
+        ...
+        url(r'^', include({{ cookiecutter.app_name }}_urls)),
+        ...
+    ]
 
 Features
 --------
@@ -32,7 +51,7 @@ Features
 * TODO
 
 Running Tests
---------------
+-------------
 
 Does the code actually work?
 
@@ -43,7 +62,7 @@ Does the code actually work?
     (myenv) $ python runtests.py
 
 Credits
----------
+-------
 
 Tools used in rendering this package:
 
