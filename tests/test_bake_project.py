@@ -136,7 +136,16 @@ def test_travis(cookies):
 
         travis_file = result.project.join('.travis.yml')
         travis_text = travis_file.read()
-        assert 'script: coverage run --source cookie_lover runtests.py' in travis_text
+        assert 'script: tox -e $TOX_ENV' in travis_text
+
+
+def test_tox(cookies):
+    extra_context = {'app_name': 'cookie_lover'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+
+        tox_file = result.project.join('tox.ini')
+        tox_text = tox_file.read()
+        assert 'commands = coverage run --source cookie_lover runtests.py' in tox_text
 
 
 def test_authors(cookies):
@@ -175,8 +184,18 @@ def test_django_versions_default(cookies):
 
         tox_file = result.project.join('tox.ini')
         tox_text = tox_file.read()
-        assert "{py27,py32,py33,py34,py35}-django18" in tox_text
-        assert "{py27,py34,py35}-django19" in tox_text
+        assert "{py27,py32,py33,py34,py35}-django-18" in tox_text
+        assert "{py27,py34,py35}-django-19" in tox_text
+        travis_file = result.project.join('.travis.yml')
+        travis_text = travis_file.read()
+        assert 'py27-django-18' in travis_text
+        assert 'py32-django-18' in travis_text
+        assert 'py33-django-18' in travis_text
+        assert 'py34-django-18' in travis_text
+        assert 'py35-django-18' in travis_text
+        assert 'py27-django-19' in travis_text
+        assert 'py34-django-19' in travis_text
+        assert 'py35-django-19' in travis_text
         setup_file = result.project.join('setup.py')
         setup_text = setup_file.read()
         assert "'Framework :: Django :: 1.8'," in setup_text
@@ -200,8 +219,14 @@ def test_new_django_versions(cookies):
 
         tox_file = result.project.join('tox.ini')
         tox_text = tox_file.read()
-        assert "{py27,py34,py35}-django110" in tox_text
+        assert "{py27,py34,py35}-django-110" in tox_text
         assert 'django19' not in tox_text
+        travis_file = result.project.join('.travis.yml')
+        travis_text = travis_file.read()
+        assert 'py27-django-110' in travis_text
+        assert 'py34-django-110' in travis_text
+        assert 'py35-django-110' in travis_text
+        assert 'django19' not in travis_text
         setup_file = result.project.join('setup.py')
         setup_text = setup_file.read()
         assert "'Framework :: Django :: 1.10'," in setup_text
