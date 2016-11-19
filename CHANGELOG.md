@@ -3,9 +3,13 @@ All enhancements and patches to cookiecutter-django will be documented in this f
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2016-11-19]
+### Added
+- Config for flake8 in setup.cfg (@browniebroke)
+
 ### Changed
 - Use Tox and fix Tox envlist (@browniebroke)
 - Cleaned installations instructions (@browniebroke)
+- Corrected domain for readthedocs: .org -> .io (@browniebroke)
 
 
 ## [2016-06-08]
