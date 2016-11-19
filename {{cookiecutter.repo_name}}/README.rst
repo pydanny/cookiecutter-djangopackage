@@ -39,8 +39,8 @@ Does the code actually work?
 ::
 
     source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install -r requirements_test.txt
-    (myenv) $ python runtests.py
+    (myenv) $ pip install tox
+    (myenv) $ tox
 
 Credits
 ---------
