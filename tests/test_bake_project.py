@@ -58,8 +58,8 @@ def test_readme(cookies):
 
         readme_file = result.project.join('README.rst')
         readme_lines = [x.strip() for x in readme_file.readlines(cr=False)]
-        assert 'Then use it in a project::' in readme_lines
-        assert '(myenv) $ pip install tox' in readme_lines
+        assert 'Add it to your `INSTALLED_APPS`:' in readme_lines
+        assert '(myenv) $ pip install -r requirements_test.txt' in readme_lines
 
 
 def test_models(cookies):
