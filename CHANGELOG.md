@@ -2,6 +2,12 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2016-11-19]
+### Changed
+- Use Tox and fix Tox envlist (@browniebroke)
+- Cleaned installations instructions (@browniebroke)
+
+
 ## [2016-06-08]
 ### Changed
 - tox.ini file made more compact (@kelseyq)
@@ -14,7 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Issue template (@purplediane)
 
 ### Changed
-- 
+-
 
 ## [2016-06-03]
 ### Added
