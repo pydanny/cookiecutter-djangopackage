@@ -13,7 +13,7 @@
 Documentation
 -------------
 
-The full documentation is at https://{{ cookiecutter.repo_name }}.readthedocs.org.
+The full documentation is at https://{{ cookiecutter.repo_name }}.readthedocs.io.
 
 Quickstart
 ----------
