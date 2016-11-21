@@ -264,8 +264,8 @@ def test_app_config(cookies):
         apps_text = apps_file.read()
         assert 'CookieLoverConfig' in apps_text
         assert "name = 'cookie_lover'" in apps_text
-        init_file = result.project.join('cookie_lover', '__init__.py')
-        init_text = init_file.read()
-        assert "default_app_config = 'cookie_lover.apps.CookieLoverConfig'" in init_text
+        readme_file = result.project.join('README.rst')
+        readme_text = readme_file.read()
+        assert "'{{ cookiecutter.app_name }}.apps.{{ cookiecutter.app_config_name }}'," in readme_text
 
 # example project tests from here on
