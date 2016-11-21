@@ -44,3 +44,4 @@ Contributors
 * Aaron Bassett / @aaronbassett
 * Kelsey Gilmore-Innis / @kelseyq
 * Diane DeMers Chen / @purplediane
+* Bruno Alla / @browniebroke

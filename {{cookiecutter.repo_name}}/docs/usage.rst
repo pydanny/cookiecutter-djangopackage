@@ -1,7 +1,26 @@
-========
+=====
 Usage
-========
+=====
 
-To use {{ cookiecutter.project_name }} in a project::
+To use {{ cookiecutter.project_name }} in a project, add it to your `INSTALLED_APPS`:
 
-    import {{ cookiecutter.app_name }}
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        '{{ cookiecutter.app_name }}',
+        ...
+    )
+
+Add {{ cookiecutter.project_name }}'s URL patterns:
+
+.. code-block:: python
+
+    from {{ cookiecutter.app_name }} import urls as {{ cookiecutter.app_name }}_urls
+
+
+    urlpatterns = [
+        ...
+        url(r'^', include({{ cookiecutter.app_name }}_urls)),
+        ...
+    ]
