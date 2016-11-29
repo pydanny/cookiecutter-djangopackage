@@ -59,7 +59,7 @@ def test_readme(cookies):
         readme_file = result.project.join('README.rst')
         readme_lines = [x.strip() for x in readme_file.readlines(cr=False)]
         assert 'Add it to your `INSTALLED_APPS`:' in readme_lines
-        assert '(myenv) $ pip install -r requirements_test.txt' in readme_lines
+        assert '(myenv) $ pip install tox' in readme_lines
 
 
 def test_models(cookies):
@@ -254,5 +254,18 @@ def test_flake8_compliance(cookies):
                 sh.flake8(name)
             except sh.ErrorReturnCode as e:
                 pytest.fail(str(e))
+
+
+def test_app_config(cookies):
+    extra_context = {'app_name': 'cookie_lover'}
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+
+        apps_file = result.project.join('cookie_lover', 'apps.py')
+        apps_text = apps_file.read()
+        assert 'CookieLoverConfig' in apps_text
+        assert "name = 'cookie_lover'" in apps_text
+        readme_file = result.project.join('README.rst')
+        readme_text = readme_file.read()
+        assert "'cookie_lover.apps.CookieLoverConfig'," in readme_text
 
 # example project tests from here on

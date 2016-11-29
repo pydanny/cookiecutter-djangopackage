@@ -5,6 +5,7 @@
   "project_name": "Django Package",
   "repo_name": "dj-package",
   "app_name": "{{ cookiecutter.repo_name.lower()|replace(' ', '_')|replace('-', '_') }}",
+  "app_config_name": "{{ cookiecutter.app_name.replace('_', ' ')|title()|replace(' ', '') }}Config",
   "project_short_description": "Your project description goes here",
   "models": "Comma-separated list of models",
   "django_versions": "1.8,1.9,1.10",
