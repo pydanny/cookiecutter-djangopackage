@@ -145,7 +145,7 @@ def test_tox(cookies):
 
         tox_file = result.project.join('tox.ini')
         tox_text = tox_file.read()
-        assert 'commands = coverage run --source cookie_lover runtests.py' in tox_text
+        assert 'commands = coverage run manage.py test' in tox_text
 
 
 def test_authors(cookies):
