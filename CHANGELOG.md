@@ -2,6 +2,10 @@
 All enhancements and patches to cookiecutter-django will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2016-12-06]
+### Added
+- Re-added `get_version()` function in setup.py (@pydanny)
+
 ## [2016-11-19]
 ### Added
 - Config for flake8 in setup.cfg (@browniebroke)
