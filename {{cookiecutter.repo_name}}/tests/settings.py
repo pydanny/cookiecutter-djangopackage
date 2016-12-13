@@ -1,6 +1,8 @@
 # -*- coding: utf-8
 from __future__ import unicode_literals, absolute_import
 
+import django
+
 DEBUG = True
 USE_TZ = True
 
@@ -10,6 +12,7 @@ SECRET_KEY = "{% for i in range(0, 50) %}{{ 'abcdefghijklmnopqrstuvwxyz012345678
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
+        "NAME": ":memory:",
     }
 }
 
@@ -24,4 +27,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-MIDDLEWARE_CLASSES = ()
+if django.VERSION >= (1, 10):
+    MIDDLEWARE = ()
+else:
+    MIDDLEWARE_CLASSES = ()
