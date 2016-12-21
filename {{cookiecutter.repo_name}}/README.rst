@@ -2,11 +2,14 @@
 {{ cookiecutter.project_name }}
 =============================
 
-.. image:: https://badge.fury.io/py/{{ cookiecutter.repo_name }}.png
+.. image:: https://badge.fury.io/py/{{ cookiecutter.repo_name }}.svg
     :target: https://badge.fury.io/py/{{ cookiecutter.repo_name }}
 
-.. image:: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.png?branch=master
+.. image:: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg?branch=master
     :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
+
+.. image:: https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
 
 {{ cookiecutter.project_short_description}}
 
