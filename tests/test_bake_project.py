@@ -142,7 +142,7 @@ def test_tox(cookies):
 
         tox_file = result.project.join('tox.ini')
         tox_text = tox_file.read()
-        assert 'commands = coverage run manage.py test' in tox_text
+        assert 'commands = coverage run --source cookie_lover runtests.py' in tox_text
 
 
 def test_authors(cookies):
@@ -280,8 +280,8 @@ def test_make_migrations(cookies):
 def test_run_tests(cookies):
     """generated project should run tests"""
     with bake_in_temp_dir(cookies, extra_context={}) as result:
-        res = result.project.join('manage.py')
+        res = result.project.join('runtests.py')
         try:
-            sh.python(res, 'test')
+            sh.python(res)
         except sh.ErrorReturnCode as e:
             pytest.fail(str(e))
