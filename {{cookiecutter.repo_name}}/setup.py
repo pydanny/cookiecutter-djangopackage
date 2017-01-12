@@ -80,7 +80,6 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',{% if '1.8' in cookiecutter.django_versions %}
-        'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',{% endif %}
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
