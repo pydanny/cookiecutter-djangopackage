@@ -1,12 +1,9 @@
-from contextlib import contextmanager
-import datetime
 import os
-import shlex
-import subprocess
+from contextlib import contextmanager
 
-from cookiecutter.utils import rmtree
-import sh
 import pytest
+import sh
+from cookiecutter.utils import rmtree
 
 
 @contextmanager
@@ -269,3 +266,22 @@ def test_app_config(cookies):
         assert "'cookie_lover.apps.CookieLoverConfig'," in readme_text
 
 # example project tests from here on
+
+def test_make_migrations(cookies):
+    """generated project should be able to generate migrations"""
+    with bake_in_temp_dir(cookies, extra_context={}) as result:
+        res = result.project.join('manage.py')
+        try:
+            sh.python(res, 'makemigrations')
+        except sh.ErrorReturnCode as e:
+            pytest.fail(str(e))
+
+
+def test_run_tests(cookies):
+    """generated project should run tests"""
+    with bake_in_temp_dir(cookies, extra_context={}) as result:
+        res = result.project.join('runtests.py')
+        try:
+            sh.python(res)
+        except sh.ErrorReturnCode as e:
+            pytest.fail(str(e))
