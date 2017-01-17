@@ -28,7 +28,7 @@ Features
 * Basic model generation
 
 Usage
-------
+-----
 
 First, create your empty repo on Github (in our example below, we would call it ``blogging_for_humans``) and set up your virtual environment with your favorite method.
 
@@ -95,7 +95,7 @@ Now take a look at your repo. Awesome, right?
 It's time to write the code!!!
 
 Running Tests
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 Code has been written, but does it actually work? Let's find out!
 
@@ -105,8 +105,25 @@ Code has been written, but does it actually work? Let's find out!
     (myenv) $ pip install -r requirements_test.txt
     (myenv) $ python runtests.py
 
-Register on PyPI
+Setting up Travis
 ~~~~~~~~~~~~~~~~~
+
+You will need to explicitly activate your repo in your `Travis CI profile`_.
+If the repo isn't showing up, run a manual synchronisation.
+
+.. _Travis CI profile: https://travis-ci.org/profile/
+
+Integration with codecov.io
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Code coverage is integrated with `Codecov`_. Make sure you have an account
+and that you've granted access to your repo. In case of a private repo, you
+will need to generate a token and pass it when submitting coverage.
+
+.. _CodeCov: https://codecov.io/
+
+Register on PyPI
+~~~~~~~~~~~~~~~~
 
 Once you've got at least a prototype working and tests running, it's time to register the app on PyPI::
 
@@ -114,7 +131,7 @@ Once you've got at least a prototype working and tests running, it's time to reg
 
 
 Releasing on PyPI
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Time to release a new version? Easy!
 
@@ -138,13 +155,13 @@ It will answer with something like::
 Go ahead and follow those instructions.
 
 Add to Django Packages
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have a release, and assuming you have an account there, just go to https://www.djangopackages.com/packages/add/ and add it there.
-
+Once you have a release, and assuming you have an account there,
+just go to https://www.djangopackages.com/packages/add/ and add it there.
 
 Follows Best Practices
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: http://twoscoops.smugmug.com/Two-Scoops-Press-Media-Kit/i-C8s5jkn/0/O/favicon-152.png
    :name: Two Scoops Logo

@@ -2,6 +2,7 @@ coverage==4.2
 mock>=1.0.1
 flake8>=2.1.0
 tox>=1.7.0
+codecov>=2.0.0
 {% if cookiecutter.models != "Comma-separated list of models" %}django-model-utils>=2.0{% endif %}
 
 # Additional test requirements go here
