@@ -1,5 +1,5 @@
 pip==9.0.1
-cookiecutter==1.5.0
+cookiecutter==1.5.1
 pytest-cookies==0.2.0
 pytest==3.0.6
 tox==2.5.0
