@@ -7,6 +7,7 @@ Leads
 * Daniel Roy Greenfeld / @pydanny
 * Audrey Roy Greenfeld / @audreyr
 * Kelsey Gilmore-Innis / @kelseyq
+* Steve Steiner / @ssteinerX
 
 Contributors
 --------------
@@ -45,3 +46,4 @@ Contributors
 * Kelsey Gilmore-Innis / @kelseyq
 * Diane DeMers Chen / @purplediane
 * Bruno Alla / @browniebroke
+* Steve Steiner / @ssteinerX
