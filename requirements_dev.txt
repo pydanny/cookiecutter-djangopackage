@@ -1,9 +1,9 @@
 pip==9.0.1
 cookiecutter==1.5.1
 pytest-cookies==0.2.0
-pytest==3.0.6
+pytest==3.2.1
 tox==2.7.0
 pytest-cov==2.5.1
 watchdog==0.8.3
-sh==1.12.9
-flake8==3.3.0
+sh==1.12.14
+flake8==3.4.1
