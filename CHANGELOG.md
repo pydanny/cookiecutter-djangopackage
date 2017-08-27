@@ -1,6 +1,33 @@
 # Change Log
 All enhancements and patches to cookiecutter-django will be documented in this file.
+
 This project adheres to [Semantic Versioning](http://semver.org/).
+
+## NOTE: August 26, 2017 -- ssteinerX
+
+Please see ROADMAP.md for upcoming changes.
+From this point forward, releases will be tagged and development will take place on the `develop` branch, merges back to master will be tagged and annotated here.
+
+## [2017-08-25]
+#### Tag: 1.0.0
+
+### Added
+
+- Create `develop` branch for WIP
+- Add pyup configuration, direct updates to `develop` branch instead of master
+- Add Python 3.6 in Tox, Travis configs
+
+### Changed
+
+- Remove Python 3.3 from test matrix
+- Upgrade Travis host OS to Trusty
+- Merged and/or closed all open pull requests (mostly pyup version updates)
+- Updates
+  - pytest 3.0.6 -> 3.2.1
+  - tox 2.5.0 -> 2.7.0
+  - pytest-cov 2.4.0 -> 2.5.1
+  - sh 1.12.9 -> 1.12.14
+  - flake8 3.3.0 -> 3.4.1
 
 ## [2016-12-06]
 ### Added
