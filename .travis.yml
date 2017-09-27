@@ -1,7 +1,6 @@
 language: python
 dist: trusty
 
-python: 3.6
 env:
   - TOXENV=py27
   - TOXENV=py34
