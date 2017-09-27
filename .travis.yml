@@ -1,5 +1,5 @@
 language: python
-dist: trusty
+#dist: trusty
 
 env:
   - TOXENV=py27
