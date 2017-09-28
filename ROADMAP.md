@@ -13,8 +13,21 @@ master with merges back to master for new tagged releasess.
 Each proposed release will have a checklist.  When it's done, the release will
 be merged back to master and tagged.
 
-The first release will be to update all tools used in building the project and
-handle all the outstanding pull requests.
+The first release (1.0.0) will be to update all tools used in building the
+project and handle all the outstanding pull requests.
+
+#### 1.0.1 : August 27, 2017 -- ssteinerX
+
+Additional cleanup of 1.0.0 release.  No code changes.
+
+Checklist:
+    [ ] Remove Django 1.9.x from generation options
+    [ ] Remove Python 3.3 from generated project etc.
+    [ ] Add Python 3.6 to generated project tests etc.
+    [ ] Add generated project to its own Github repo with Tox/Travis so it
+        can be tested before releases too!
+    [ ] Automate generation & test of generated project as part of new release
+    [ ] Document new release/tag workflow
 
 #### 1.0.0 : August 26, 2017 -- ssteinerX
 

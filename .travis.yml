@@ -1,15 +1,15 @@
-language: python
 dist: trusty
+language: python
 
-python: 3.6
-env:
-  - TOXENV=py27
-  - TOXENV=py34
-  - TOXENV=py35
-  - TOXENV=py36
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "pypy"
 
 install:
-  - pip install -U tox
+  - pip install -U tox-travis
 
 script:
   - tox
