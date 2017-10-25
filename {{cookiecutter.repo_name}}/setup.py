@@ -74,7 +74,8 @@ setup(
         'Framework :: Django',{% if '1.8' in cookiecutter.django_versions %}
         'Framework :: Django :: 1.8',{% endif %}{% if '1.9' in cookiecutter.django_versions %}
         'Framework :: Django :: 1.9',{% endif %}{% if '1.10' in cookiecutter.django_versions %}
-        'Framework :: Django :: 1.10',{% endif %}
+        'Framework :: Django :: 1.10',{% endif %}{% if '1.11' in cookiecutter.django_versions %}
+        'Framework :: Django :: 1.11',{% endif %}
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
@@ -84,5 +85,6 @@ setup(
         'Programming Language :: Python :: 3.3',{% endif %}
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
 )
