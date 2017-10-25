@@ -14,9 +14,9 @@ if not re.match(APP_REGEX, app_name):
     logger.error('Invalid value for app_name "{}"'.format(app_name))
     sys.exit(1)
 
-ALLOWED_VERSIONS = ["1.8", "1.9", "1.10", "master"]
+ALLOWED_VERSIONS = ["1.8", "1.9", "1.10", "1.11", "master"]
 
 for django_version in '{{cookiecutter.django_versions}}'.split(","):
-	if str(django_version).strip() not in ALLOWED_VERSIONS:
-		logger.error('Invalid Django version "{}". '.format(django_version))
-		sys.exit(1)
+    if str(django_version).strip() not in ALLOWED_VERSIONS:
+        logger.error('Invalid Django version "{}". '.format(django_version))
+        sys.exit(1)
