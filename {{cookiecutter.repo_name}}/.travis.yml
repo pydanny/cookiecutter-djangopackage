@@ -3,21 +3,28 @@
 language: python
 
 python:
-  - "3.5"
+  - "3.6"
 
 env: {% if '1.8' in cookiecutter.django_versions %}
   - TOX_ENV=py35-django-18
   - TOX_ENV=py34-django-18
   - TOX_ENV=py33-django-18
   - TOX_ENV=py27-django-18{% endif %}{% if '1.9' in cookiecutter.django_versions %}
+  - TOX_ENV=py36-django-19
   - TOX_ENV=py35-django-19
   - TOX_ENV=py34-django-19
   - TOX_ENV=py27-django-19{% endif %}{% if '1.10' in cookiecutter.django_versions %}
+  - TOX_ENV=py36-django-110
   - TOX_ENV=py35-django-110
   - TOX_ENV=py34-django-110
-  - TOX_ENV=py27-django-110{% endif %}{% if 'master' in cookiecutter.django_versions %}
+  - TOX_ENV=py27-django-110{% endif %}{% if '1.11' in cookiecutter.django_versions %}
+  - TOX_ENV=py36-django-111
+  - TOX_ENV=py35-django-111
+  - TOX_ENV=py34-django-111
+  - TOX_ENV=py27-django-111{% endif %}{% if 'master' in cookiecutter.django_versions %}
   - TOX_ENV=py34-django-master
   - TOX_ENV=py35-django-master
+  - TOX_ENV=py36-django-master
   - TOX_ENV=py27-django-master{% endif %}
 
 matrix:
@@ -25,7 +32,8 @@ matrix:
   allow_failures:
     - env: TOX_ENV=py27-django-master
     - env: TOX_ENV=py34-django-master
-    - env: TOX_ENV=py35-django-master{% endif %}
+    - env: TOX_ENV=py35-django-master
+    - env: TOX_ENV=py36-django-master{% endif %}
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements_test.txt

@@ -24,7 +24,8 @@ def inside_dir(dirpath):
 def bake_in_temp_dir(cookies, *args, **kwargs):
     """
     Delete the temporal directory that is created when executing the tests
-    :param cookies: pytest_cookies.Cookies, cookie to be baked and its temporal files will be removed
+    :param cookies: pytest_cookies.Cookies, cookie to be baked and its
+    temporal files will be removed
     """
     result = cookies.bake(*args, **kwargs)
     try:
@@ -39,12 +40,12 @@ def test_bake_selecting_license(cookies):
     """
     license_strings = {
         'Apache Software License 2.0': 'Apache',
-        'BSD': 'Redistributions of source code must retain the above copyright notice, this',
-        'ISCL': 'Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee',
+        'BSD': 'Redistributions of source code must retain the above copyright notice, this',  # noqa
+        'ISCL': 'Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee',  # noqa
         'MIT': 'MIT ',
     }
     for license, target_string in license_strings.items():
-        with bake_in_temp_dir(cookies, extra_context={'open_source_license': license}) as result:
+        with bake_in_temp_dir(cookies, extra_context={'open_source_license': license}) as result:  # noqa
             assert target_string in result.project.join('LICENSE').read()
             assert license in result.project.join('setup.py').read()
 
@@ -60,13 +61,12 @@ def test_readme(cookies):
 
 
 def test_models(cookies):
-    extra_context = {'models': 'ChocolateChip,Zimsterne', 'app_name': 'cookies'}
+    extra_context = {'models': 'ChocolateChip,Zimsterne', 'app_name': 'cookies'}  # noqa
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
 
         model_file = result.project.join('cookies', 'models.py')
         model_txt = model_file.read()
         assert 'TimeStampedModel' in model_txt
-
 
 
 def test_views_with_models(cookies):
@@ -86,7 +86,8 @@ def test_views_with_models(cookies):
 
 def test_views_without_models(cookies):
     """
-    Test case to assert that the views.py file is empty when there are no models defined
+    Test case to assert that the views.py file is empty when there are no
+    models defined
     """
     extra_context = {'app_name': 'cookies'}
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
@@ -113,13 +114,14 @@ def test_urls_regex_with_model(cookies):
 
 def test_urls_without_model(cookies):
     """
-    Test case to assert that the urls.py file has the basic template when there are no models defined
+    Test case to assert that the urls.py file has the basic template when
+    there are no models defined
     """
     extra_context = {'app_name': 'cookies'}
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
         urls_file = result.project.join('cookies', 'urls.py')
         urls_file_txt = urls_file.read()
-        basic_url = "url(r'', TemplateView.as_view(template_name=\"base.html\"))"
+        basic_url = "url(r'', TemplateView.as_view(template_name=\"base.html\"))"  # noqa
         assert basic_url in urls_file_txt
 
 
@@ -142,7 +144,7 @@ def test_tox(cookies):
 
         tox_file = result.project.join('tox.ini')
         tox_text = tox_file.read()
-        assert 'commands = coverage run --source cookie_lover runtests.py' in tox_text
+        assert 'commands = coverage run --source cookie_lover runtests.py' in tox_text  # noqa
 
 
 def test_authors(cookies):
@@ -153,17 +155,18 @@ def test_authors(cookies):
         authors_text = authors_file.read()
         assert 'Cookie McCookieface' in authors_text
 
+
 def test_manifest(cookies):
     extra_context = {'app_name': 'cookie_lover'}
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
 
         manifest_file = result.project.join('MANIFEST.in')
         manifest_text = manifest_file.read()
-        assert 'recursive-include cookie_lover *.html *.png *.gif *js *.css *jpg *jpeg *svg *py' in manifest_text
+        assert 'recursive-include cookie_lover *.html *.png *.gif *js *.css *jpg *jpeg *svg *py' in manifest_text  # noqa
 
 
 def test_setup_py(cookies):
-    extra_context = {'app_name': 'cookie_lover', 'full_name': 'Cookie McCookieface'}
+    extra_context = {'app_name': 'cookie_lover', 'full_name': 'Cookie McCookieface'}  # noqa
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
 
         setup_file = result.project.join('setup.py')
@@ -174,7 +177,8 @@ def test_setup_py(cookies):
 
 def test_django_versions_default(cookies):
     """
-    Test case to assert that the tox.ini & setup.py files are generated with correct versions w default Django versions
+    Test case to assert that the tox.ini & setup.py files are generated
+    with correct versions w default Django versions
     """
 
     with bake_in_temp_dir(cookies) as result:
@@ -183,6 +187,8 @@ def test_django_versions_default(cookies):
         tox_text = tox_file.read()
         assert "{py27,py33,py34,py35}-django-18" in tox_text
         assert "{py27,py34,py35,py36}-django-19" in tox_text
+        assert "{py27,py34,py35,py36}-django-110" in tox_text
+        assert "{py27,py34,py35,py36}-django-111" in tox_text
         travis_file = result.project.join('.travis.yml')
         travis_text = travis_file.read()
         assert 'py27-django-18' in travis_text
@@ -192,10 +198,21 @@ def test_django_versions_default(cookies):
         assert 'py27-django-19' in travis_text
         assert 'py34-django-19' in travis_text
         assert 'py35-django-19' in travis_text
+        assert 'py36-django-19' in travis_text
+        assert 'py27-django-110' in travis_text
+        assert 'py34-django-110' in travis_text
+        assert 'py35-django-110' in travis_text
+        assert 'py36-django-110' in travis_text
+        assert 'py27-django-111' in travis_text
+        assert 'py34-django-111' in travis_text
+        assert 'py35-django-111' in travis_text
+        assert 'py36-django-111' in travis_text
         setup_file = result.project.join('setup.py')
         setup_text = setup_file.read()
         assert "'Framework :: Django :: 1.8'," in setup_text
         assert "'Framework :: Django :: 1.9'," in setup_text
+        assert "'Framework :: Django :: 1.10'," in setup_text
+        assert "'Framework :: Django :: 1.11'," in setup_text
         assert "'Programming Language :: Python :: 2'," in setup_text
         assert "'Programming Language :: Python :: 2.7'," in setup_text
         assert "'Programming Language :: Python :: 3'," in setup_text
@@ -206,7 +223,8 @@ def test_django_versions_default(cookies):
 
 def test_new_django_versions(cookies):
     """
-    Test case to assert that the tox.ini & setup.py files are generated with correct versions with a new Django version
+    Test case to assert that the tox.ini & setup.py files are generated
+    with correct versions with a new Django version
     """
 
     extra_context = {'django_versions': '1.10'}
@@ -264,6 +282,7 @@ def test_app_config(cookies):
         assert "'cookie_lover.apps.CookieLoverConfig'," in readme_text
 
 # example project tests from here on
+
 
 def test_make_migrations(cookies):
     """generated project should be able to generate migrations"""
