@@ -12,6 +12,7 @@ Leads
 Contributors
 --------------
 
+* George Silva / @georgersilva
 * Jakh Daven / @tuxcanfly
 * Raphi / @raphigaziano
 * Aaron Bassett / @aaronbassett

@@ -8,7 +8,6 @@ python:
 env: {% if '1.8' in cookiecutter.django_versions %}
   - TOX_ENV=py35-django-18
   - TOX_ENV=py34-django-18
-  - TOX_ENV=py33-django-18
   - TOX_ENV=py27-django-18{% endif %}{% if '1.9' in cookiecutter.django_versions %}
   - TOX_ENV=py36-django-19
   - TOX_ENV=py35-django-19
