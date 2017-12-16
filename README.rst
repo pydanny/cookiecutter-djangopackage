@@ -169,9 +169,9 @@ Follows Best Practices
    :alt: Two Scoops of Django
    :target: http://twoscoopspress.org/products/two-scoops-of-django-1-11
 
-This project follows best practices as espoused in `Two Scoops of Django: Best Practices for Django 1.11`_.
+This project follows best practices as espoused in `Two Scoops of Django 1.11: Best Practices for the Django Web Framework`_.
 
-.. _`Two Scoops of Django: Best Practices for Django 1.11`: http://twoscoopspress.org/products/two-scoops-of-django-1-11
+.. _`Two Scoops of Django 1.11: Best Practices for the Django Web Framework`: http://twoscoopspress.org/products/two-scoops-of-django-1-11
 
 Support This Project
 --------------------
