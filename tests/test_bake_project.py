@@ -280,6 +280,7 @@ def test_run_tests(cookies):
     with bake_in_temp_dir(cookies, extra_context={}) as result:
         res = result.project.join('runtests.py')
         try:
-            sh.python(res)
+            with res.dirpath().as_cwd():
+                sh.python(res)
         except sh.ErrorReturnCode as e:
             pytest.fail(str(e))
