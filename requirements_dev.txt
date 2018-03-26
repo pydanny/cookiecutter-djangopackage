@@ -1,7 +1,7 @@
-pip==9.0.1
+pip==9.0.3
 cookiecutter==1.6.0
 pytest-cookies==0.3.0
-pytest==3.3.1
+pytest==3.5.0
 tox==2.9.1
 pytest-cov==2.5.1
 watchdog==0.8.3
