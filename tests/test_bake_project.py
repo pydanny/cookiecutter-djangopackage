@@ -181,21 +181,21 @@ def test_django_versions_default(cookies):
 
         tox_file = result.project.join('tox.ini')
         tox_text = tox_file.read()
-        assert "{py27,py33,py34,py35}-django-18" in tox_text
-        assert "{py27,py34,py35}-django-19" in tox_text
+        assert "{py27,py33,py34,py35}-django-111" in tox_text
+        assert "{py27,py34,py35}-django-20" in tox_text
         travis_file = result.project.join('.travis.yml')
         travis_text = travis_file.read()
-        assert 'py27-django-18' in travis_text
-        assert 'py33-django-18' in travis_text
-        assert 'py34-django-18' in travis_text
-        assert 'py35-django-18' in travis_text
-        assert 'py27-django-19' in travis_text
-        assert 'py34-django-19' in travis_text
-        assert 'py35-django-19' in travis_text
+        assert 'py27-django-111' in travis_text
+        assert 'py33-django-111' in travis_text
+        assert 'py34-django-111' in travis_text
+        assert 'py35-django-111' in travis_text
+        assert 'py27-django-20' in travis_text
+        assert 'py34-django-20' in travis_text
+        assert 'py35-django-20' in travis_text
         setup_file = result.project.join('setup.py')
         setup_text = setup_file.read()
-        assert "'Framework :: Django :: 1.8'," in setup_text
-        assert "'Framework :: Django :: 1.9'," in setup_text
+        assert "'Framework :: Django :: 1.11'," in setup_text
+        assert "'Framework :: Django :: 2.0'," in setup_text
         assert "'Programming Language :: Python :: 2'," in setup_text
         assert "'Programming Language :: Python :: 2.7'," in setup_text
         assert "'Programming Language :: Python :: 3'," in setup_text
