@@ -3,28 +3,26 @@
 language: python
 
 python:
-  - "3.5"
+  - "3.6"
 
 env: {% if '1.11' in cookiecutter.django_versions %}
   - TOX_ENV=py36-django-111
   - TOX_ENV=py35-django-111
   - TOX_ENV=py34-django-111
   - TOX_ENV=py27-django-111{% endif %}{% if '2.0' in cookiecutter.django_versions %}
-    - TOX_ENV=py36-django-20
-    - TOX_ENV=py35-django-20
-    - TOX_ENV=py34-django-20
-    - TOX_ENV=py27-django-20{% endif %}{% if 'master' in cookiecutter.django_versions %}
+  - TOX_ENV=py36-django-20
+  - TOX_ENV=py35-django-20
+  - TOX_ENV=py34-django-20{% endif %}{% if 'master' in cookiecutter.django_versions %}
   - TOX_ENV=py34-django-master
   - TOX_ENV=py35-django-master
-  - TOX_ENV=py36-django-master
-  - TOX_ENV=py27-django-master{% endif %}
+  - TOX_ENV=py36-django-master{% endif %}
 
 matrix:
   fast_finish: true{% if 'master' in cookiecutter.django_versions %}
   allow_failures:
-    - env: TOX_ENV=py27-django-master
     - env: TOX_ENV=py34-django-master
-    - env: TOX_ENV=py35-django-master{% endif %}
+    - env: TOX_ENV=py35-django-master
+    - env: TOX_ENV=py36-django-master{% endif %}
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements_test.txt
