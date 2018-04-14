@@ -66,7 +66,7 @@ It prompts you for information that it uses to create the app, with defaults in 
     app_name [blogging_for_humans]:
     project_short_description [Your project description goes here]: A sample Django package
     models [Comma-separated list of models]: Scoop, Flavor
-    django_versions [1.8,1.9,1.10,1.11,2.0]:
+    django_versions [1.11,2.0]:
     version [0.1.0]:
     create_example_project [N]:
     Select open_source_license:
@@ -163,23 +163,12 @@ just go to https://www.djangopackages.com/packages/add/ and add it there.
 Follows Best Practices
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: http://twoscoops.smugmug.com/Two-Scoops-Press-Media-Kit/i-C8s5jkn/0/O/favicon-152.png
+.. image:: https://cdn.shopify.com/s/files/1/0304/6901/products/2017-06-29-tsd11-sticker-02_medium.png?v=1523456754
    :name: Two Scoops Logo
    :align: center
    :alt: Two Scoops of Django
    :target: http://twoscoopspress.org/products/two-scoops-of-django-1-11
 
-This project follows best practices as espoused in `Two Scoops of Django 1.11: Best Practices for the Django Web Framework`_.
+This project follows best practices as espoused in `Two Scoops of Django: Best Practices for Django 1.11`_.
 
-.. _`Two Scoops of Django 1.11: Best Practices for the Django Web Framework`: http://twoscoopspress.org/products/two-scoops-of-django-1-11
-
-Support This Project
---------------------
-
-This project is maintained by volunteers. Support their efforts by spreading the word about:
-
-.. image:: https://s3.amazonaws.com/tsacademy/images/tsa-logo-250x60-transparent-01.png
-   :name: Two Scoops Academy
-   :align: center
-   :alt: Two Scoops Academy
-   :target: http://www.twoscoops.academy/
+.. _`Two Scoops of Django: Best Practices for Django 1.11`: http://twoscoopspress.org/products/two-scoops-of-django-1-11
