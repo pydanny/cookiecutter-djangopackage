@@ -8,7 +8,7 @@
   "app_config_name": "{{ cookiecutter.app_name.replace('_', ' ')|title()|replace(' ', '') }}Config",
   "project_short_description": "Your project description goes here",
   "models": "Comma-separated list of models",
-  "django_versions": "1.8,1.9,1.10",
+  "django_versions": "1.11,2.0",
   "version": "0.1.0",
   "create_example_project": "N",
   "open_source_license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"]
