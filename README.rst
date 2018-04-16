@@ -40,7 +40,7 @@ Now, get Cookiecutter_. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/pydanny/cookiecutter-djangopackage.git
+    $ cookiecutter gh:pydanny/cookiecutter-djangopackage.git
 
 You'll be prompted for some questions, answer them, then it will create a directory that is your new package.
 
