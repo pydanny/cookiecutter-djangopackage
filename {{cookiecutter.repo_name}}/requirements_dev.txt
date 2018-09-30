@@ -1,4 +1,4 @@
 bumpversion==0.5.3
-wheel==0.31.1
+wheel==0.32.0
 twine==1.11.0
 {% if cookiecutter.models != "Comma-separated list of models" %}django-model-utils>=2.0{% endif %}
