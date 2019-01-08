@@ -3,7 +3,7 @@ cookiecutter==1.6.0
 pytest-cookies==0.3.0
 pytest==4.1.0
 tox==3.6.1
-pytest-cov==2.6.0
+pytest-cov==2.6.1
 watchdog==0.9.0
 sh==1.12.14
 flake8==3.5.0
