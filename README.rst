@@ -2,8 +2,8 @@
 Cookiecutter Django Package
 ===========================
 
-.. image:: https://travis-ci.org/pydanny/cookiecutter-djangopackage.svg?branch=master
-    :target: https://travis-ci.org/pydanny/cookiecutter-djangopackage
+.. image:: https://travis-ci.org/dcopm999/cookiecutter-djangopackage.svg?branch=master
+    :target: https://travis-ci.org/dcopm999/cookiecutter-djangopackage
 
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
 
@@ -40,7 +40,7 @@ Now, get Cookiecutter_. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter gh:pydanny/cookiecutter-djangopackage
+    $ cookiecutter gh:dcopm999/cookiecutter-djangopackage
 
 You'll be prompted for some questions, answer them, then it will create a directory that is your new package.
 
