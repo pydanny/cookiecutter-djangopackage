@@ -29,6 +29,7 @@ pip-log.txt
 .coverage
 .tox
 nosetests.xml
+.pytest_cache
 
 # Translations
 *.mo
@@ -48,3 +49,6 @@ docs/_build
 # Cookiecutter
 output/
 dj-package/
+
+# Visual Code
+settings.json
