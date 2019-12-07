@@ -50,7 +50,7 @@ label_prs: pyup-update
 # requires private repo permissions, even on public repos
 # default: empty
 assignees:
- - ssteinerX
+ - jonathan-s
 
 # configure the branch prefix the bot is using
 # default: pyup-

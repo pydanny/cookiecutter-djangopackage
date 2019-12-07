@@ -198,7 +198,6 @@ def test_django_versions_default(cookies):
         assert "'Programming Language :: Python :: 2'," in setup_text
         assert "'Programming Language :: Python :: 2.7'," in setup_text
         assert "'Programming Language :: Python :: 3'," in setup_text
-        assert "'Programming Language :: Python :: 3.4'," in setup_text
         assert "'Programming Language :: Python :: 3.5'," in setup_text
         assert "'Programming Language :: Python :: 3.6'," in setup_text
 
@@ -229,7 +228,6 @@ def test_new_django_versions(cookies):
         assert "'Programming Language :: Python :: 2'," in setup_text
         assert "'Programming Language :: Python :: 2.7'," in setup_text
         assert "'Programming Language :: Python :: 3'," in setup_text
-        assert "'Programming Language :: Python :: 3.4'," in setup_text
         assert "'Programming Language :: Python :: 3.5'," in setup_text
         assert "'Programming Language :: Python :: 3.6'," in setup_text
         assert "'Programming Language :: Python :: 3.3'," not in setup_text
