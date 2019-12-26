@@ -17,6 +17,6 @@ if not re.match(APP_REGEX, app_name):
 ALLOWED_VERSIONS = ["1.11", "2.0", "2.1", "master"]
 
 for django_version in '{{cookiecutter.django_versions}}'.split(","):
-	if str(django_version).strip() not in ALLOWED_VERSIONS:
-		logger.error('Invalid Django version "{}". '.format(django_version))
-		sys.exit(1)
+    if str(django_version).strip() not in ALLOWED_VERSIONS:
+        logger.error('Invalid Django version "{}". '.format(django_version))
+        sys.exit(1)
