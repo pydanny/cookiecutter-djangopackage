@@ -72,7 +72,8 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',{% if '1.11' in cookiecutter.django_versions %}
         'Framework :: Django :: 1.11',{% endif %}{% if '2.0' in cookiecutter.django_versions %}
-        'Framework :: Django :: 2.0',{% endif %}
+        'Framework :: Django :: 2.0',{% endif %}{% if '2.1' in cookiecutter.django_versions %}
+        'Framework :: Django :: 2.1',{% endif %}
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
