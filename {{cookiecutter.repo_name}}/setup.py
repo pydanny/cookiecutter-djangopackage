@@ -50,6 +50,7 @@ if sys.argv[-1] == 'tag':
 
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+requirements = open('requirements.txt').readlines()
 
 setup(
     name='{{ cookiecutter.repo_name }}',
@@ -63,7 +64,7 @@ setup(
         '{{ cookiecutter.app_name }}',
     ],
     include_package_data=True,
-    install_requires=[{% if cookiecutter.models != "Comma-separated list of models" %}"django-model-utils>=2.0",{% endif %}],
+    install_requires=requirements,
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}
