@@ -167,8 +167,8 @@ Follows Best Practices
    :name: Two Scoops Logo
    :align: center
    :alt: Two Scoops of Django
-   :target: http://twoscoopspress.org/products/two-scoops-of-django-1-11
+   :target: http://feldroy.com/products/two-scoops-of-django-3-x
 
 This project follows best practices as espoused in `Two Scoops of Django: Best Practices for Django 3.x`_.
 
-.. _`Two Scoops of Django: Best Practices for Django 3,x`: http://twoscoopspress.org/products/two-scoops-of-django-3-x
+.. _`Two Scoops of Django: Best Practices for Django 3.x`: http://twoscoopspress.org/products/two-scoops-of-django-3-x
