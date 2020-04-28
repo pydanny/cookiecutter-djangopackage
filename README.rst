@@ -163,12 +163,12 @@ just go to https://www.djangopackages.com/packages/add/ and add it there.
 Follows Best Practices
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://cdn.shopify.com/s/files/1/0304/6901/products/2017-06-29-tsd11-sticker-02_medium.png?v=1523456754
+.. image:: https://cdn.shopify.com/s/files/1/0304/6901/products/Two_Scoops_of_Django_3.x_Pre-Alpha-coming-soon_medium.jpg
    :name: Two Scoops Logo
    :align: center
    :alt: Two Scoops of Django
    :target: http://twoscoopspress.org/products/two-scoops-of-django-1-11
 
-This project follows best practices as espoused in `Two Scoops of Django: Best Practices for Django 1.11`_.
+This project follows best practices as espoused in `Two Scoops of Django: Best Practices for Django 3.x`_.
 
-.. _`Two Scoops of Django: Best Practices for Django 1.11`: http://twoscoopspress.org/products/two-scoops-of-django-1-11
+.. _`Two Scoops of Django: Best Practices for Django 3,x`: http://twoscoopspress.org/products/two-scoops-of-django-3-x
