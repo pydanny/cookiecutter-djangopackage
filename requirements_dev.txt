@@ -1,6 +1,6 @@
 pip==20.1
 cookiecutter==1.7.2
-pytest-cookies==0.3.0
+pytest-cookies==0.5.1
 pytest==4.2.1
 tox==3.7.0
 pytest-cov==2.6.1
