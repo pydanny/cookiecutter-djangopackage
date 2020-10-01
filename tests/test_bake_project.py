@@ -212,7 +212,7 @@ def test_new_django_versions(cookies):
 
         tox_file = result.project.join('tox.ini')
         tox_text = tox_file.read()
-        assert "{py27,py35,py36}-django-111" in tox_text
+        assert "{py27,py35,py36}-django-111" not in tox_text
         assert 'django19' not in tox_text
         travis_file = result.project.join('.travis.yml')
         travis_text = travis_file.read()
@@ -230,6 +230,8 @@ def test_new_django_versions(cookies):
         assert "'Programming Language :: Python :: 3'," in setup_text
         assert "'Programming Language :: Python :: 3.5'," in setup_text
         assert "'Programming Language :: Python :: 3.6'," in setup_text
+        assert "'Programming Language :: Python :: 3.7'," in setup_text
+        assert "'Programming Language :: Python :: 3.8'," in setup_text
         assert "'Programming Language :: Python :: 2.7'," not in setup_text
         assert "'Programming Language :: Python :: 3.3'," not in setup_text
         assert "'Programming Language :: Python :: 3.4'," not in setup_text
