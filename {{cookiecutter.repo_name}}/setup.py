@@ -71,9 +71,10 @@ setup(
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
-        'Development Status :: 3 - Alpha',{% if '1.11' in cookiecutter.django_versions %}
-        'Framework :: Django :: 1.11',{% endif %}{% if '2.1' in cookiecutter.django_versions %}
-        'Framework :: Django :: 2.1',{% endif %}
+        'Development Status :: 3 - Alpha',{% if '2.2' in cookiecutter.django_versions %}
+        'Framework :: Django :: 2.2',{% endif %}{% if '3.0' in cookiecutter.django_versions %}
+        'Framework :: Django :: 3.0',{% endif %}{% if '3.1' in cookiecutter.django_versions %}
+        'Framework :: Django :: 3.1',{% endif %}
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
