@@ -4,6 +4,6 @@ pytest-cookies==0.5.1
 pytest==6.1.1
 tox==3.20.0
 pytest-cov==2.10.1
-watchdog==0.8.3
+watchdog==0.10.3
 sh==1.12.14
 flake8==3.4.1
