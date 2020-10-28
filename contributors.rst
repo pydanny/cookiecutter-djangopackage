@@ -47,3 +47,4 @@ Contributors
 * Diane DeMers Chen / @purplediane
 * Bruno Alla / @browniebroke
 * Steve Steiner / @ssteinerX
+* Luiz Marques @luizanao
