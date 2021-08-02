@@ -1,5 +1,5 @@
 invoke==1.6.0
 twine==3.4.2
-wheel
+wheel==0.36.2
 zest.releaser
 {% if cookiecutter.models != "Comma-separated list of models" %}django-model-utils>=2.0{% endif %}
