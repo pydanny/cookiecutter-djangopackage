@@ -2,7 +2,7 @@ pip==21.2.4
 cookiecutter==1.7.3
 pytest-cookies==0.6.1
 pytest==6.2.4
-tox==2.9.1
+tox==3.24.3
 pytest-cov==2.5.1
 watchdog==0.8.3
 sh==1.12.14
