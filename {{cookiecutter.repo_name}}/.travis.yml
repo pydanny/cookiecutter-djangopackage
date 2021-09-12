@@ -2,28 +2,52 @@
 
 language: python
 
-python:
-  - "3.6"
-
-env: {% if '1.11' in cookiecutter.django_versions %}
-  - TOX_ENV=py36-django-111
-  - TOX_ENV=py35-django-111
-  - TOX_ENV=py27-django-111{% endif %}{% if '2.0' in cookiecutter.django_versions %}
-  - TOX_ENV=py36-django-20
-  - TOX_ENV=py35-django-20{% endif %}{% if '2.1' in cookiecutter.django_versions %}
-  - TOX_ENV=py37-django-21
-  - TOX_ENV=py36-django-21
-  - TOX_ENV=py35-django-21{% endif %}{% if 'master' in cookiecutter.django_versions %}
-  - TOX_ENV=py35-django-master
-  - TOX_ENV=py36-django-master{% endif %}
-
 matrix:
-  fast_finish: true{% if 'master' in cookiecutter.django_versions %}
-  allow_failures:
-    - env: TOX_ENV=py35-django-master
-    - env: TOX_ENV=py36-django-master{% endif %}
+  include:
+    - name: "py37-django-22"
+      python: "3.7"
+      env: TOX_ENV=py37-django-22
+    - name: "py37-django-30"
+      python: "3.7"
+      env: TOX_ENV=py37-django-30
+    - name: "py37-django-31"
+      python: "3.7"
+      env: TOX_ENV=py37-django-31
+    - name: "py37-django-32"
+      python: "3.7"
+      env: TOX_ENV=py37-django-32
+    - name: "py38-django-22"
+      python: "3.8"
+      env: TOX_ENV=py38-django-22
+    - name: "py38-django-30"
+      python: "3.8"
+      env: TOX_ENV=py38-django-30
+    - name: "py38-django-31"
+      python: "3.8"
+      env: TOX_ENV=py38-django-31
+    - name: "py38-django-32"
+      python: "3.8"
+      env: TOX_ENV=py38-django-32
+    - name: "py39-django-22"
+      python: "3.9"
+      env: TOX_ENV=py39-django-22
+    - name: "py39-django-30"
+      python: "3.9"
+      env: TOX_ENV=py39-django-30
+    - name: "py39-django-31"
+      python: "3.9"
+      env: TOX_ENV=py39-django-31
+    - name: "py39-django-32"
+      python: "3.9"
+      env: TOX_ENV=py39-django-32
+  fast_finish: true
 
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+#before_install:
+#  - sudo add-apt-repository --yes ppa:ubuntugis/ppa
+#  - sudo apt-get --quiet update
+#  - sudo apt-get install --yes libgdal-dev gdal-bin libspatialite7 libspatialite-dev libsqlite3-mod-spatialite
+# command to install dependencies, e.g.
+# pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements_test.txt
 
 # command to run tests using coverage, e.g. python setup.py test

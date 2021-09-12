@@ -3,4 +3,5 @@ include CONTRIBUTING.rst
 include HISTORY.rst
 include LICENSE
 include README.rst
+include requirements.txt
 recursive-include {{cookiecutter.app_name}} *.html *.png *.gif *js *.css *jpg *jpeg *svg *py

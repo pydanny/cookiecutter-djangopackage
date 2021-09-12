@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-{% if cookiecutter.models != "Comma-separated list of models" %}
+{%- if cookiecutter.models != "Comma-separated list of models" %}
 from django.contrib import admin
 
 from .models import (
@@ -12,4 +12,4 @@ class {{ model.strip() }}Admin(admin.ModelAdmin):
     pass
 
 {% endfor %}
-{% endif %}
+{%- endif %}
