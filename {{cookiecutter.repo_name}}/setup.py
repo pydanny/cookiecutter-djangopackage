@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-import re
 import sys
 
-from {{ cookiecutter.app_name }}/__init__ import __version__
+from {{ cookiecutter.app_name }}.__init__ import __version__
 
 try:
     from setuptools import setup

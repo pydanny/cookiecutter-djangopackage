@@ -11,7 +11,7 @@ Tests for `{{ cookiecutter.repo_name }}` models module.
 from django.test import TestCase
 
 
-class TestCase(TestCase):
+class ModelsCase(TestCase):
     def setUp(self):
         pass
 
