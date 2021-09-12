@@ -1,15 +1,15 @@
 {
-  "full_name": "Your full name here",
-  "email": "you@example.com",
-  "github_username": "yourname",
-  "project_name": "Django Package",
-  "repo_name": "dj-package",
-  "app_name": "{{ cookiecutter.repo_name.lower()|replace(' ', '_')|replace('-', '_') }}",
-  "app_config_name": "{{ cookiecutter.app_name.replace('_', ' ')|title()|replace(' ', '') }}Config",
-  "project_short_description": "Your project description goes here",
-  "models": "Comma-separated list of models",
-  "django_versions": "1.11,2.1",
-  "version": "0.1.0",
-  "create_example_project": "N",
-  "open_source_license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"]
+    "project_name": "Django Package",
+    "project_short_description": "Your project description goes here",
+    "django_versions": ["3.2", "3.1", "3.0", "2.2"],
+    "repo_name": "dj-package",
+    "app_name": "{{ cookiecutter.repo_name.lower()|replace(' ', '_')|replace('-', '_') }}",
+    "app_config_name": "{{ cookiecutter.app_name.replace('_', ' ')|title()|replace(' ', '') }}Config",
+    "full_name": "Your full name here",
+    "email": "you@example.com",
+    "github_username": "yourname",
+    "models": "Comma-separated list of models",
+    "version": "0.1.0",
+    "create_example_project": "N",
+    "open_source_license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"]
 }
