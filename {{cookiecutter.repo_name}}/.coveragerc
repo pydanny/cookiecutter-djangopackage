@@ -6,6 +6,8 @@ omit =
     *site-packages*
     *tests*
     *.tox*
+    */migrations/*
+
 show_missing = True
 exclude_lines =
     raise NotImplementedError
