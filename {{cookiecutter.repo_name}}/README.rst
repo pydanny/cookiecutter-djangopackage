@@ -39,9 +39,6 @@ Add {{ cookiecutter.project_name }}'s URL patterns:
 
 .. code-block:: python
 
-    from {{ cookiecutter.app_name }} import urls as {{ cookiecutter.app_name }}_urls
-
-
     urlpatterns = [
         ...
         path('{{ cookiecutter.app_name }}/', include('{{ cookiecutter.app_name }}.urls')),
