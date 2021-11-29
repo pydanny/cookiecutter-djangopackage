@@ -1,4 +1,4 @@
-invoke
+invoke==1.6.0
 twine
 wheel
 zest.releaser
