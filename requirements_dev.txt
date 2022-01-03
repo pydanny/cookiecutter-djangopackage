@@ -5,5 +5,5 @@ pytest==6.2.5
 tox==3.24.5
 pytest-cov==3.0.0
 watchdog==2.1.6
-sh==1.12.14
+sh==1.14.2
 flake8==3.4.1
